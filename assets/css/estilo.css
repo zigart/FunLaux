@@ -231,8 +231,8 @@ main {
 
 /********************************************Diseño de contacto*********************************************/
 .contacto {
-  background-image: url(../imagenes/Textura.jpg);
-  background-size: cover;
+  background: #adadad;
+  background: linear-gradient(0deg, #adadad 0%, white 50%, #adadad 100%);
   padding: 20px; }
   .contacto .contacto__fondo {
     padding: 10px;
@@ -243,10 +243,12 @@ main {
   .contacto .contacto__mapa {
     width: 90%;
     height: 70%; }
-  .contacto section div p {
-    color: white; }
-  .contacto section div label {
-    color: white; }
+  .contacto section {
+    margin-bottom: 150px; }
+    .contacto section div p {
+      color: white; }
+    .contacto section div label {
+      color: white; }
 
 /******************************************Diseño del footer****************************************************/
 .footer {
