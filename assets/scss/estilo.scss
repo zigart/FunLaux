@@ -1,0 +1,401 @@
+/*Medidas default*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+
+/***************************************************variables**********************************************************/
+
+$bgcolor: white;
+$tituloColor:rgb(15, 147, 170);
+$subtituloColor:rgb(0, 255, 149);
+$margin: 200px 0px;
+@mixin size ($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin margin ($topBot, $leftRight) {
+    margin: $topBot $leftRight;
+}
+
+
+/***************************************Diseño general de todas las paginas********************************************/
+
+body {
+    font-style: normal;
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 2px;
+    background-color: white;
+}
+
+.subtitulos {
+    color: subtituloColor;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+main {
+    min-height: 80vh;
+    background-color: $bgcolor;
+    @if $bgcolor==black {
+        color: white;
+    }
+    @else {
+        color: black;
+    }
+}
+
+@each $subtitle in trayectoria,
+servicios,
+contacto {
+    .#{$subtitle}__subtitulo {
+        color: $subtituloColor;
+        @include margin(30px, 0);
+        font-size: 30px;
+        animation-name: aparicionTransparencia;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in-out;
+        animation-duration: 2s;
+        animation-delay: 0s;
+    }
+}
+
+@each $title in trayectoria,
+servicios,
+galeria,
+contacto {
+    .#{$title}__titulo {
+        color: $tituloColor;
+        font-family: 'Roboto', sans-serif;
+        @include margin(150px, 0);
+        font-size: 40px;
+        animation-name: titulo;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in-out;
+        animation-duration: 1s;
+        animation-delay: 0s;
+    }
+}
+
+
+/*********************************************Animaciones********************************************************/
+
+@keyframes titulo {
+    0% {
+        transform: translateY(-100px);
+    }
+    25% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes izquierdaDerecha {
+    0% {
+        transform: translateX(-600px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes derechaIzquierda {
+    0% {
+        transform: translateX(600px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes aparicionTransparencia {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes retorcer {
+    0% {
+        transform: skewX(10deg);
+    }
+    100% {
+        transform: skewX(0);
+    }
+}
+
+@keyframes ampliar {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(2);
+    }
+}
+
+
+/********************************************Estilo del header***************************************************/
+
+.header {
+    background-color: rgb(0, 0, 0);
+    border-bottom: 8px double rgb(255, 255, 255);
+    nav {
+        .navegacion__logo {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2rem;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
+        ul {
+            li {
+                margin: 0 10px;
+            }
+        }
+    }
+}
+
+
+/***********************************************Diseño de inicio**********************************************/
+
+.inicio {
+    background: rgb(173, 173, 173);
+    background: linear-gradient(0deg, rgba(173, 173, 173, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(173, 173, 173, 1) 100%);
+    .bordeCarrusel {
+        border: 3px double black;
+    }
+    .carousel-inner img {
+        width: 50%;
+    }
+    #h1Inicio {
+        visibility: hidden;
+    }
+}
+
+
+/*********************************************Diseño de trayectoria******************************************/
+
+.trayectoria {
+    overflow: hidden;
+    @for $i from 1 through 2 {
+        .trayectoria__#{$i} {
+            margin: $margin;
+            padding: 10px;
+            animation-name: aparicionTransparencia;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in-out;
+            animation-duration: 1.5s;
+            animation-delay: 0s;
+            h2 {
+                color: $subtituloColor;
+            }
+        }
+    }
+}
+
+
+/*********************************************Diseño servicios*************************************************/
+
+.servicios {
+    overflow: hidden;
+    .servicios__imagenes {
+        width: 100%;
+        border-radius: 80%;
+        animation-name: aparicionTransparencia;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in-out;
+        animation-duration: 2s;
+        animation-delay: 0s;
+    }
+    .servicios__parrafos {
+        @include margin(80px, 0);
+    }
+    table {
+        thead {
+            tr {
+                th {
+                    color: rgb(15, 147, 170);
+                }
+            }
+        }
+        tbody {
+            tr {
+                td {
+                    color: rgb(0, 255, 170);
+                }
+            }
+        }
+    }
+}
+
+
+/*********************************************Diseño de galeria**********************************************/
+
+.galeria {
+    overflow: hidden;
+    .galeria__fotos {
+        @include margin(80px, auto);
+        width: 80%;
+        padding: 0px 10px;
+        background-image: url(../imagenes/Textura.jpg);
+        background-size: cover;
+        border: 2px solid black;
+        .galeria__imagenes {
+            height: 250px;
+            @include margin(70px, 0);
+        }
+        .galeria__imagenes:hover {
+            animation-name: ampliar;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in-out;
+            animation-duration: 1s;
+            animation-delay: 0s;
+            transform: scale(2);
+            z-index: 1;
+        }
+    }
+}
+
+
+/********************************************Diseño de contacto*********************************************/
+
+.contacto {
+    background-image: url(../imagenes/Textura.jpg);
+    background-size: cover;
+    padding: 20px;
+    .contacto__fondo {
+        padding: 10px;
+        width: 80%;
+        background-color: rgba(0, 0, 0, 0.39);
+        border: 2.4px solid rgb(0, 0, 0);
+        margin-bottom: 20px;
+    }
+    .contacto__mapa {
+        @include size(90%, 70%);
+    }
+    section {
+        div {
+            p {
+                color: white;
+            }
+            label {
+                color: white;
+            }
+        }
+    }
+}
+
+
+/******************************************Diseño del footer****************************************************/
+
+.footer {
+    position: relative;
+    background-color: black;
+    border-top: 8px double white;
+    color: rgb(156, 156, 156);
+    bottom: 0;
+    .footer__placeholdersvg {
+        @include size(30px, 30px);
+    }
+    .footer__telefonosvg {
+        @extend .footer__placeholdersvg;
+    }
+    .footer__sobresvg {
+        @extend .footer__placeholdersvg
+    }
+    .footer__email {
+        margin: auto;
+    }
+    .footer__parrafo {
+        margin: auto 10px;
+        align-items: center;
+    }
+    .footer__parrafo--numeros {
+        height: 60px;
+    }
+}
+
+
+/* adaptaciones del responsive */
+
+
+/*xs*/
+
+@media (max-width:575px) {
+    .galeria__imagenes {
+        height: 210px;
+        margin: 30px 0;
+    }
+    .contacto__formulario {
+        margin: 40px 0;
+    }
+    .contacto__fondo--mapa {
+        height: 500px;
+        margin: 20px 0;
+    }
+    .footer__parrafo {
+        margin: 0 1px;
+    }
+}
+
+
+/*sm*/
+
+@media (min-width:576px) {
+    .galeria__imagenes {
+        height: 210px;
+        margin: 30px 0;
+    }
+    .contacto__formulario {
+        margin: 40px 0;
+    }
+    .contacto__fondo--mapa {
+        height: 500px;
+        margin: 20px 0;
+    }
+    .footer__parrafo {
+        margin: 0 1px;
+    }
+}
+
+
+/*md*/
+
+@media (min-width:768px) {
+    .trayectoria__titulo {
+        margin: 300px 0;
+    }
+    .trayectoria__historia,
+    .trayectoria__experiencias,
+    .trayectoria__imagenes {
+        margin-bottom: 200px;
+    }
+    .servicios__imagenes {
+        width: 100%;
+    }
+    .contacto__formulario {
+        margin: 0;
+    }
+    .contacto__fondo {
+        height: 100%;
+        margin-top: 0;
+    }
+    .footer__parrafo {
+        margin: auto 10px;
+    }
+}

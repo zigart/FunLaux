@@ -1,0 +1,312 @@
+@charset "UTF-8";
+/*Medidas default*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.container-fluid {
+  margin: 0;
+  padding: 0; }
+
+/***************************************************variables**********************************************************/
+/***************************************Diseño general de todas las paginas********************************************/
+body {
+  font-style: normal;
+  font-family: 'Quicksand', sans-serif;
+  letter-spacing: 2px;
+  background-color: white; }
+
+.subtitulos {
+  color: subtituloColor;
+  font-family: 'Roboto', sans-serif;
+  text-align: center; }
+
+main {
+  min-height: 80vh;
+  background-color: white;
+  color: black; }
+
+.trayectoria__subtitulo {
+  color: #00ff95;
+  margin: 30px 0;
+  font-size: 30px;
+  animation-name: aparicionTransparencia;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2s;
+  animation-delay: 0s; }
+
+.servicios__subtitulo {
+  color: #00ff95;
+  margin: 30px 0;
+  font-size: 30px;
+  animation-name: aparicionTransparencia;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2s;
+  animation-delay: 0s; }
+
+.contacto__subtitulo {
+  color: #00ff95;
+  margin: 30px 0;
+  font-size: 30px;
+  animation-name: aparicionTransparencia;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2s;
+  animation-delay: 0s; }
+
+.trayectoria__titulo {
+  color: #0f93aa;
+  font-family: 'Roboto', sans-serif;
+  margin: 150px 0;
+  font-size: 40px;
+  animation-name: titulo;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  animation-delay: 0s; }
+
+.servicios__titulo {
+  color: #0f93aa;
+  font-family: 'Roboto', sans-serif;
+  margin: 150px 0;
+  font-size: 40px;
+  animation-name: titulo;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  animation-delay: 0s; }
+
+.galeria__titulo {
+  color: #0f93aa;
+  font-family: 'Roboto', sans-serif;
+  margin: 150px 0;
+  font-size: 40px;
+  animation-name: titulo;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  animation-delay: 0s; }
+
+.contacto__titulo {
+  color: #0f93aa;
+  font-family: 'Roboto', sans-serif;
+  margin: 150px 0;
+  font-size: 40px;
+  animation-name: titulo;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  animation-delay: 0s; }
+
+/*********************************************Animaciones********************************************************/
+@keyframes titulo {
+  0% {
+    transform: translateY(-100px); }
+  25% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(-20px); }
+  100% {
+    transform: translateY(0); } }
+
+@keyframes izquierdaDerecha {
+  0% {
+    transform: translateX(-600px); }
+  100% {
+    transform: translateX(0); } }
+
+@keyframes derechaIzquierda {
+  0% {
+    transform: translateX(600px); }
+  100% {
+    transform: translateX(0); } }
+
+@keyframes aparicionTransparencia {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes retorcer {
+  0% {
+    transform: skewX(10deg); }
+  100% {
+    transform: skewX(0); } }
+
+@keyframes ampliar {
+  0% {
+    transform: scale(1); }
+  100% {
+    transform: scale(2); } }
+
+/********************************************Estilo del header***************************************************/
+.header {
+  background-color: black;
+  border-bottom: 8px double white; }
+  .header nav .navegacion__logo {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    text-decoration: none;
+    color: white; }
+  .header nav ul li {
+    margin: 0 10px; }
+
+/***********************************************Diseño de inicio**********************************************/
+.inicio {
+  background: #adadad;
+  background: linear-gradient(0deg, #adadad 0%, white 50%, #adadad 100%); }
+  .inicio .bordeCarrusel {
+    border: 3px double black; }
+  .inicio .carousel-inner img {
+    width: 50%; }
+  .inicio #h1Inicio {
+    visibility: hidden; }
+
+/*********************************************Diseño de trayectoria******************************************/
+.trayectoria {
+  overflow: hidden; }
+  .trayectoria .trayectoria__1 {
+    margin: 200px 0px;
+    padding: 10px;
+    animation-name: aparicionTransparencia;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1.5s;
+    animation-delay: 0s; }
+    .trayectoria .trayectoria__1 h2 {
+      color: #00ff95; }
+  .trayectoria .trayectoria__2 {
+    margin: 200px 0px;
+    padding: 10px;
+    animation-name: aparicionTransparencia;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1.5s;
+    animation-delay: 0s; }
+    .trayectoria .trayectoria__2 h2 {
+      color: #00ff95; }
+
+/*********************************************Diseño servicios*************************************************/
+.servicios {
+  overflow: hidden; }
+  .servicios .servicios__imagenes {
+    width: 100%;
+    border-radius: 80%;
+    animation-name: aparicionTransparencia;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+    animation-delay: 0s; }
+  .servicios .servicios__parrafos {
+    margin: 80px 0; }
+  .servicios table thead tr th {
+    color: #0f93aa; }
+  .servicios table tbody tr td {
+    color: #00ffaa; }
+
+/*********************************************Diseño de galeria**********************************************/
+.galeria {
+  overflow: hidden; }
+  .galeria .galeria__fotos {
+    margin: 80px auto;
+    width: 80%;
+    padding: 0px 10px;
+    background-image: url(../imagenes/Textura.jpg);
+    background-size: cover;
+    border: 2px solid black; }
+    .galeria .galeria__fotos .galeria__imagenes {
+      height: 250px;
+      margin: 70px 0; }
+    .galeria .galeria__fotos .galeria__imagenes:hover {
+      animation-name: ampliar;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in-out;
+      animation-duration: 1s;
+      animation-delay: 0s;
+      transform: scale(2);
+      z-index: 1; }
+
+/********************************************Diseño de contacto*********************************************/
+.contacto {
+  background-image: url(../imagenes/Textura.jpg);
+  background-size: cover;
+  padding: 20px; }
+  .contacto .contacto__fondo {
+    padding: 10px;
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.39);
+    border: 2.4px solid black;
+    margin-bottom: 20px; }
+  .contacto .contacto__mapa {
+    width: 90%;
+    height: 70%; }
+  .contacto section div p {
+    color: white; }
+  .contacto section div label {
+    color: white; }
+
+/******************************************Diseño del footer****************************************************/
+.footer {
+  position: relative;
+  background-color: black;
+  border-top: 8px double white;
+  color: #9c9c9c;
+  bottom: 0; }
+  .footer .footer__placeholdersvg, .footer .footer__telefonosvg, .footer .footer__sobresvg {
+    width: 30px;
+    height: 30px; }
+  .footer .footer__email {
+    margin: auto; }
+  .footer .footer__parrafo {
+    margin: auto 10px;
+    align-items: center; }
+  .footer .footer__parrafo--numeros {
+    height: 60px; }
+
+/* adaptaciones del responsive */
+/*xs*/
+@media (max-width: 575px) {
+  .galeria__imagenes {
+    height: 210px;
+    margin: 30px 0; }
+  .contacto__formulario {
+    margin: 40px 0; }
+  .contacto__fondo--mapa {
+    height: 500px;
+    margin: 20px 0; }
+  .footer__parrafo {
+    margin: 0 1px; } }
+
+/*sm*/
+@media (min-width: 576px) {
+  .galeria__imagenes {
+    height: 210px;
+    margin: 30px 0; }
+  .contacto__formulario {
+    margin: 40px 0; }
+  .contacto__fondo--mapa {
+    height: 500px;
+    margin: 20px 0; }
+  .footer__parrafo {
+    margin: 0 1px; } }
+
+/*md*/
+@media (min-width: 768px) {
+  .trayectoria__titulo {
+    margin: 300px 0; }
+  .trayectoria__historia,
+  .trayectoria__experiencias,
+  .trayectoria__imagenes {
+    margin-bottom: 200px; }
+  .servicios__imagenes {
+    width: 100%; }
+  .contacto__formulario {
+    margin: 0; }
+  .contacto__fondo {
+    height: 100%;
+    margin-top: 0; }
+  .footer__parrafo {
+    margin: auto 10px; } }
