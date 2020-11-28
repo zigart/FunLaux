@@ -129,6 +129,8 @@ main {
 /*********************************************Diseño de trayectoria******************************************/
 .trayectoria {
   overflow: hidden; }
+  .trayectoria img {
+    border-radius: 40px; }
   .trayectoria .trayectoria__1 {
     margin: 200px 0px;
     padding: 10px; }

@@ -151,6 +151,9 @@ contacto {
 
 .trayectoria {
     overflow: hidden;
+    img {
+        border-radius: 40px;
+    }
     @for $i from 1 through 2 {
         .trayectoria__#{$i} {
             margin: $margin;
