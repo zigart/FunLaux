@@ -104,7 +104,7 @@ contacto {
         transform: scale(1);
     }
     100% {
-        transform: scale(2);
+        transform: scale(1.3);
     }
 }
 
@@ -204,11 +204,9 @@ contacto {
         @include margin(80px, auto);
         width: 80%;
         padding: 0px 10px;
-        background-image: url(../imagenes/Textura.jpg);
-        background-size: cover;
-        border: 2px solid black;
+        background-color: rgba(0, 0, 0, 0.50);
         .galeria__imagenes {
-            height: 250px;
+            height: auto;
             @include margin(70px, 0);
         }
         .galeria__imagenes:hover {
@@ -217,7 +215,7 @@ contacto {
             animation-timing-function: ease-in-out;
             animation-duration: 1s;
             animation-delay: 0s;
-            transform: scale(2);
+            transform: scale(1.3);
             z-index: 1;
         }
     }
@@ -323,6 +321,9 @@ contacto {
     }
     .footer__parrafo {
         margin: 0 1px;
+    }
+    .galeria__imagenes:hover {
+        animation: none;
     }
 }
 
