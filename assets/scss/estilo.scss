@@ -225,6 +225,10 @@
         margin: 15px 0;
     }
     
+    .modal a {
+        text-decoration: none;
+    }
+    
     .imagen {
         @include margin(15%, 0);
         width: 100%;
@@ -347,6 +351,7 @@
         .imagen {
             @include margin(50%, 0);
             transform: scale(1);
+            text-decoration: none;
         }
     }
     /*sm*/

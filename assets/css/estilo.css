@@ -193,6 +193,9 @@ main {
   text-align: center;
   margin: 15px 0; }
 
+.modal a {
+  text-decoration: none; }
+
 .imagen {
   margin: 15% 0;
   width: 100%;
@@ -288,7 +291,8 @@ main {
     margin: 0 1px; }
   .imagen {
     margin: 50% 0;
-    transform: scale(1); } }
+    transform: scale(1);
+    text-decoration: none; } }
 
 /*sm*/
 @media (min-width: 576px) {
