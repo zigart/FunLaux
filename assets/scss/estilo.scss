@@ -13,8 +13,8 @@
     /***************************************************variables**********************************************************/
     
     $bgcolor: white;
-    $tituloColor:rgb(15, 147, 170);
-    $subtituloColor:rgb(0, 255, 149);
+    $tituloColor:rgb(0, 0, 0);
+    $subtituloColor:rgb(56, 56, 56);
     $margin: 200px 0px;
     @mixin size ($width, $height) {
         width: $width;
@@ -168,14 +168,14 @@
             thead {
                 tr {
                     th {
-                        color: rgb(15, 147, 170);
+                        color: rgb(255, 254, 254);
                     }
                 }
             }
             tbody {
                 tr {
                     td {
-                        color: rgb(0, 255, 170);
+                        color: rgb(184, 184, 184);
                     }
                 }
             }

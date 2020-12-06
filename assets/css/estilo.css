@@ -28,22 +28,22 @@ main {
   color: black; }
 
 .trayectoria__subtitulo {
-  color: #00ff95;
+  color: #383838;
   margin: 30px 0;
   font-size: 30px; }
 
 .servicios__subtitulo {
-  color: #00ff95;
+  color: #383838;
   margin: 30px 0;
   font-size: 30px; }
 
 .contacto__subtitulo {
-  color: #00ff95;
+  color: #383838;
   margin: 30px 0;
   font-size: 30px; }
 
 .trayectoria__titulo {
-  color: #0f93aa;
+  color: black;
   font-family: 'Roboto', sans-serif;
   margin: 150px 0;
   font-size: 40px;
@@ -54,7 +54,7 @@ main {
   animation-delay: 0s; }
 
 .servicios__titulo {
-  color: #0f93aa;
+  color: black;
   font-family: 'Roboto', sans-serif;
   margin: 150px 0;
   font-size: 40px;
@@ -65,7 +65,7 @@ main {
   animation-delay: 0s; }
 
 .galeria__titulo {
-  color: #0f93aa;
+  color: black;
   font-family: 'Roboto', sans-serif;
   margin: 150px 0;
   font-size: 40px;
@@ -76,7 +76,7 @@ main {
   animation-delay: 0s; }
 
 .contacto__titulo {
-  color: #0f93aa;
+  color: black;
   font-family: 'Roboto', sans-serif;
   margin: 150px 0;
   font-size: 40px;
@@ -135,12 +135,12 @@ main {
     margin: 200px 0px;
     padding: 10px; }
     .trayectoria .trayectoria__1 h2 {
-      color: #00ff95; }
+      color: #383838; }
   .trayectoria .trayectoria__2 {
     margin: 200px 0px;
     padding: 10px; }
     .trayectoria .trayectoria__2 h2 {
-      color: #00ff95; }
+      color: #383838; }
 
 /*********************************************Diseño servicios*************************************************/
 .servicios {
@@ -152,9 +152,9 @@ main {
   .servicios .servicios__parrafos {
     margin: 80px 0; }
   .servicios table thead tr th {
-    color: #0f93aa; }
+    color: #fffefe; }
   .servicios table tbody tr td {
-    color: #00ffaa; }
+    color: #b8b8b8; }
 
 /*********************************************Diseño de galeria**********************************************/
 .galeria {
