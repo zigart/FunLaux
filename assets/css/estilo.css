@@ -157,23 +157,82 @@ main {
 
 /*********************************************Diseño de galeria**********************************************/
 .galeria {
-  overflow: hidden; }
-  .galeria .galeria__fotos {
-    margin: 80px auto;
-    width: 80%;
-    padding: 0px 10px;
-    background-color: rgba(0, 0, 0, 0.5); }
-    .galeria .galeria__fotos .galeria__imagenes {
-      height: auto;
-      margin: 70px 0; }
-    .galeria .galeria__fotos .galeria__imagenes:hover {
-      animation-name: ampliar;
-      animation-iteration-count: 1;
-      animation-timing-function: ease-in-out;
-      animation-duration: 1s;
-      animation-delay: 0s;
-      transform: scale(1.3);
-      z-index: 1; }
+  overflow: hidden;
+  width: 90%;
+  margin: auto;
+  list-style: none;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+
+.galeria li {
+  margin: 5px; }
+
+.galeria img {
+  width: 500px;
+  height: auto; }
+
+/*Estilos del modal*/
+.modal {
+  display: none; }
+
+.modal:target {
+  display: block;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.modal h3 {
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  margin: 15px 0; }
+
+.imagen {
+  margin: 15% 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.imagen a {
+  color: #fff;
+  font-size: 40px;
+  text-decoration: none;
+  margin: 0 10px; }
+
+.imagen a:nth-child(2) {
+  margin: 0;
+  height: 100%;
+  flex-shrink: 2; }
+
+.imagen img {
+  width: 500px;
+  height: 100%;
+  max-width: 100%;
+  border: 7px solid #fff;
+  box-sizing: border-box; }
+
+.cerrar {
+  display: block;
+  float: right;
+  margin: 1% 1%;
+  background: #fff;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  padding: 5px;
+  border-radius: 50%;
+  line-height: 25px; }
 
 /********************************************Diseño de contacto*********************************************/
 .contacto {
@@ -226,7 +285,10 @@ main {
     height: 500px;
     margin: 20px 0; }
   .footer__parrafo {
-    margin: 0 1px; } }
+    margin: 0 1px; }
+  .imagen {
+    margin: 50% 0;
+    transform: scale(1); } }
 
 /*sm*/
 @media (min-width: 576px) {
@@ -240,8 +302,9 @@ main {
     margin: 20px 0; }
   .footer__parrafo {
     margin: 0 1px; }
-  .galeria__imagenes:hover {
-    animation: none; } }
+  .imagen {
+    margin: 25% 0;
+    transform: scale(1.13); } }
 
 /*md*/
 @media (min-width: 768px) {
@@ -259,4 +322,7 @@ main {
     height: 100%;
     margin-top: 0; }
   .footer__parrafo {
-    margin: auto 10px; } }
+    margin: auto 10px; }
+  .imagen {
+    margin: 15% 0;
+    transform: scale(1.5); } }
