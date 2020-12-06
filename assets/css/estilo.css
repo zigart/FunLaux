@@ -147,6 +147,7 @@ main {
   overflow: hidden; }
   .servicios .servicios__imagenes {
     width: 100%;
+    height: auto;
     border-radius: 80%; }
   .servicios .servicios__parrafos {
     margin: 80px 0; }
