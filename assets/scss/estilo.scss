@@ -125,9 +125,6 @@
     .inicio {
         background: rgb(173, 173, 173);
         background: linear-gradient(0deg, rgba(173, 173, 173, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(173, 173, 173, 1) 100%);
-        .carousel-inner img {
-            width: 50%;
-        }
         #h1Inicio {
             visibility: hidden;
         }
@@ -333,6 +330,17 @@
     /*xs*/
     
     @media (max-width:575px) {
+        .bordeCarrusel {
+            border: 3px double rgb(156, 156, 156);
+        }
+        .carousel {
+            .carousel-item {
+                height: 40vh;
+            }
+            .carousel-item img {
+                height: 40vh;
+            }
+        }
         .galeria__imagenes {
             height: 210px;
             margin: 30px 0;
@@ -361,6 +369,17 @@
     /*sm*/
     
     @media (min-width:576px) {
+        .bordeCarrusel {
+            border: 3px double rgb(156, 156, 156);
+        }
+        .carousel {
+            .carousel-item {
+                height: 45vh;
+            }
+            .carousel-item img {
+                height: 45vh;
+            }
+        }
         .galeria__imagenes {
             height: 210px;
             margin: 30px 0;
@@ -388,6 +407,17 @@
     /*md*/
     
     @media (min-width:768px) {
+        .bordeCarrusel {
+            border: 3px double rgb(156, 156, 156);
+        }
+        .carousel {
+            .carousel-item {
+                height: 50vh;
+            }
+            .carousel-item img {
+                height: 50vh;
+            }
+        }
         .trayectoria__titulo {
             margin: 300px 0;
         }
@@ -422,6 +452,9 @@
     
     // Desktop
     @media (min-width:1024px) {
+        .bordeCarrusel {
+            border: none;
+        }
         .carousel {
             .carousel-item {
                 height: 90vh;
