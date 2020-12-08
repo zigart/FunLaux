@@ -292,7 +292,7 @@ main {
     transform: scale(1);
     text-decoration: none; }
   .contacto {
-    padding: 0; }
+    padding: 20px; }
     .contacto section {
       margin-bottom: 50px;
       padding: 5px; }
