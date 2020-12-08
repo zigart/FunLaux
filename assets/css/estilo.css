@@ -244,11 +244,12 @@ main {
     padding: 10px;
     width: 80%;
     background-color: rgba(0, 0, 0, 0.39);
-    border: 2.4px solid black;
     margin-bottom: 20px; }
   .contacto .contacto__mapa {
     width: 90%;
     height: 70%; }
+  .contacto .form-group button {
+    margin: 0 20px; }
   .contacto section {
     margin-bottom: 150px; }
     .contacto section div p {
@@ -286,25 +287,30 @@ main {
   .galeria__imagenes {
     height: 210px;
     margin: 30px 0; }
-  .contacto h1 {
-    font-size: 30px; }
-  .contacto .contacto__fondo {
-    padding: 5px;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.39);
-    border: 2.4px solid black;
-    margin-bottom: 5px; }
-  .contacto__formulario {
-    margin: 0px 0; }
-  .contacto__fondo--mapa {
-    height: 500px;
-    margin: 20px 0; }
-  .footer__parrafo {
-    margin: 0 1px; }
   .imagen {
     margin: 50% 0;
     transform: scale(1);
-    text-decoration: none; } }
+    text-decoration: none; }
+  .contacto {
+    padding: 0; }
+    .contacto section {
+      margin-bottom: 50px;
+      padding: 5px; }
+    .contacto h1 {
+      font-size: 30px; }
+    .contacto .contacto__fondo {
+      border: none;
+      padding: 5px;
+      width: 100%;
+      margin-bottom: 5px; }
+    .contacto .contacto__mapa {
+      width: 95%;
+      height: 70%; }
+    .contacto .contacto__fondo--mapa {
+      height: 500px;
+      margin: 20px 0; }
+  .footer__parrafo {
+    margin: 0 1px; } }
 
 /*sm*/
 @media (min-width: 576px) {
@@ -317,14 +323,12 @@ main {
   .galeria__imagenes {
     height: 210px;
     margin: 30px 0; }
-  .contacto h1 {
-    font-size: 35px; }
-  .contacto__formulario {
-    margin: 40px 0; }
-  .contacto__fondo--mapa {
+  .contacto .contacto__formulario {
+    margin-top: 40px; }
+  .contacto .contacto__fondo--mapa {
     height: 500px;
     margin: 20px 0; }
-  .footer__parrafo {
+  .contacto .footer__parrafo {
     margin: 0 1px; }
   .imagen {
     margin: 25% 0;
@@ -346,13 +350,13 @@ main {
     margin-bottom: 200px; }
   .servicios__imagenes {
     width: 100%; }
-  .contacto h1 {
-    font-size: 40px; }
-  .contacto__formulario {
-    margin: 0; }
-  .contacto__fondo {
-    height: 100%;
-    margin-top: 0; }
+  .contacto .contacto__fondo {
+    height: auto;
+    margin: 20px 0; }
+  .contacto .contacto__formulario {
+    margin-top: 40px; }
+  .contacto .contacto__fondo--mapa {
+    height: 650px; }
   .footer__parrafo {
     margin: auto 10px; }
   .imagen {
@@ -370,4 +374,9 @@ main {
     font-size: 40px; }
   .imagen {
     margin: 15% 0;
-    transform: scale(1.5); } }
+    transform: scale(1.5); }
+  .contacto .contacto__fondo {
+    height: 100%;
+    margin-top: 0; }
+  .contacto .form-group button {
+    margin-top: 20px; } }
