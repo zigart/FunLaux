@@ -349,9 +349,16 @@
             h1 {
                 font-size: 30px;
             }
+            .contacto__fondo {
+                padding: 5px;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.39);
+                border: 2.4px solid rgb(0, 0, 0);
+                margin-bottom: 5px;
+            }
         }
         .contacto__formulario {
-            margin: 40px 0;
+            margin: 0px 0;
         }
         .contacto__fondo--mapa {
             height: 500px;
