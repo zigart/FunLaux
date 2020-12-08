@@ -442,15 +442,12 @@
             width: 100%;
         }
         .contacto {
-            .contacto__fondo {
-                height: auto;
-                margin: 20px 0;
-            }
             .contacto__formulario {
                 margin-top: 40px;
             }
             .contacto__fondo--mapa {
-                height: 650px;
+                height: 500px;
+                margin: 20px 0;
             }
         }
         .footer__parrafo {
@@ -463,7 +460,7 @@
     }
     
     // Desktop
-    @media (min-width:1024px) {
+    @media (min-width:992px) {
         .bordeCarrusel {
             border: none;
         }
