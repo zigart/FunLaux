@@ -45,7 +45,7 @@ main {
 .trayectoria__titulo {
   color: black;
   font-family: 'Roboto', sans-serif;
-  margin: 150px 0;
+  margin: 300px 0;
   font-size: 40px;
   animation-name: titulo;
   animation-iteration-count: 1;
@@ -56,7 +56,7 @@ main {
 .servicios__titulo {
   color: black;
   font-family: 'Roboto', sans-serif;
-  margin: 150px 0;
+  margin: 300px 0;
   font-size: 40px;
   animation-name: titulo;
   animation-iteration-count: 1;
@@ -67,7 +67,7 @@ main {
 .galeria__titulo {
   color: black;
   font-family: 'Roboto', sans-serif;
-  margin: 150px 0;
+  margin: 300px 0;
   font-size: 40px;
   animation-name: titulo;
   animation-iteration-count: 1;
@@ -78,7 +78,7 @@ main {
 .contacto__titulo {
   color: black;
   font-family: 'Roboto', sans-serif;
-  margin: 150px 0;
+  margin: 300px 0;
   font-size: 40px;
   animation-name: titulo;
   animation-iteration-count: 1;
@@ -126,6 +126,7 @@ main {
 .trayectoria {
   overflow: hidden; }
   .trayectoria img {
+    margin: 200px 0px;
     border-radius: 40px; }
   .trayectoria .trayectoria__1 {
     margin: 200px 0px;
@@ -138,9 +139,15 @@ main {
     .trayectoria .trayectoria__2 h2 {
       color: #383838; }
 
-/*********************************************Diseño servicios*************************************************/
+/******************************************************Diseño servicios*************************************************/
 .servicios {
   overflow: hidden; }
+  .servicios .servicios__1 {
+    margin: 200px 0px;
+    padding: 10px; }
+  .servicios .servicios__2 {
+    margin: 200px 0px;
+    padding: 10px; }
   .servicios .servicios__imagenes {
     width: 100%;
     height: auto;
@@ -153,11 +160,16 @@ main {
     color: #b8b8b8; }
 
 /*********************************************Diseño de galeria**********************************************/
+.galeria__titulo {
+  margin-bottom: 0; }
+
 .galeria {
   overflow: hidden;
   width: 90%;
-  margin: auto;
   list-style: none;
+  margin: auto;
+  margin-top: 500px;
+  margin-bottom: 150px;
   padding: 20px;
   box-sizing: border-box;
   display: flex;
@@ -238,8 +250,7 @@ main {
 .contacto {
   overflow: hidden;
   background: #adadad;
-  background: linear-gradient(0deg, #adadad 0%, white 50%, #adadad 100%);
-  padding: 20px; }
+  background: linear-gradient(0deg, #adadad 0%, white 50%, #adadad 100%); }
   .contacto .contacto__fondo {
     padding: 10px;
     width: 80%;
@@ -310,7 +321,8 @@ main {
       height: 500px;
       margin: 20px 0; }
   .footer__parrafo {
-    margin: 0 1px; } }
+    margin: auto 0px;
+    align-items: center; } }
 
 /*sm*/
 @media (min-width: 576px) {
@@ -342,8 +354,6 @@ main {
     height: 50vh; }
   .carousel .carousel-item img {
     height: 50vh; }
-  .trayectoria__titulo {
-    margin: 300px 0; }
   .trayectoria__historia,
   .trayectoria__experiencias,
   .trayectoria__imagenes {
