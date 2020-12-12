@@ -280,9 +280,6 @@ main {
     height: 30px; }
   .footer .footer__email {
     margin: auto; }
-  .footer .footer__parrafo {
-    margin: auto 10px;
-    align-items: center; }
   .footer .footer__parrafo--numeros {
     height: 60px; }
 
@@ -344,7 +341,9 @@ main {
     margin: 0 1px; }
   .imagen {
     margin: 25% 0;
-    transform: scale(1.13); } }
+    transform: scale(1.13); }
+  .footer__parrafo {
+    margin: auto 10px; } }
 
 /*md*/
 @media (min-width: 768px) {
@@ -387,4 +386,6 @@ main {
     height: 100%;
     margin-top: 0; }
   .contacto .form-group button {
-    margin-top: 20px; } }
+    margin-top: 20px; }
+  .footer__parrafo {
+    margin: auto 10px; } }

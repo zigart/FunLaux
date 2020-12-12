@@ -334,10 +334,6 @@
         .footer__email {
             margin: auto;
         }
-        .footer__parrafo {
-            margin: auto 10px;
-            align-items: center;
-        }
         .footer__parrafo--numeros {
             height: 60px;
         }
@@ -428,6 +424,9 @@
             @include margin(25%, 0);
             transform: scale(1.13);
         }
+        .footer__parrafo {
+            margin: auto 10px;
+        }
     }
     /*md*/
     
@@ -501,5 +500,8 @@
                     margin-top: 20px;
                 }
             }
+        }
+        .footer__parrafo {
+            margin: auto 10px;
         }
     }
