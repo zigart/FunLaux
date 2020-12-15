@@ -135,6 +135,33 @@ contacto {
 .inicio {
     background: rgb(173, 173, 173);
     background: linear-gradient(0deg, rgba(173, 173, 173, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(173, 173, 173, 1) 100%);
+    .foto1 {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("../imagenes/funlaux v7.jpg");
+    }
+    .foto2 {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("../imagenes/large-steel-factory-warehouse.jpg");
+    }
+    .foto3 {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("../imagenes/deposito.jpg");
+    }
     #h1Inicio {
         visibility: hidden;
     }
@@ -177,7 +204,8 @@ contacto {
         border-radius: 80%;
     }
     .servicios__parrafos {
-        @include margin(80px, 0);
+        @include margin(80px,
+        0);
     }
     table {
         thead {
@@ -256,7 +284,8 @@ contacto {
 }
 
 .imagen {
-    @include margin(15%, 0);
+    @include margin(15%,
+    0);
     width: 100%;
     height: auto;
     display: flex;
@@ -290,7 +319,8 @@ contacto {
 .cerrar {
     display: block;
     float: right;
-    @include margin(1%, 1%);
+    @include margin(1%,
+    1%);
     background: #fff;
     width: 30px;
     height: 30px;
@@ -317,7 +347,8 @@ contacto {
         margin-bottom: 20px;
     }
     .contacto__mapa {
-        @include size(90%, 70%);
+        @include size(90%,
+        70%);
     }
     .form-group {
         button {
@@ -347,7 +378,8 @@ contacto {
     color: rgb(156, 156, 156);
     bottom: 0;
     .footer__placeholdersvg {
-        @include size(30px, 30px);
+        @include size(30px,
+        30px);
     }
     .footer__telefonosvg {
         @extend .footer__placeholdersvg;
@@ -376,9 +408,18 @@ contacto {
     .carousel {
         .carousel-item {
             height: 40vh;
-        }
-        .carousel-item img {
-            height: 40vh;
+            .foto1 {
+                background-size: 100% 100%;
+                background-image: url("../imagenes/funlaux-xs.jpg");
+            }
+            .foto2 {
+                background-size: 100% 100%;
+                background-image: url("../imagenes/large-steel-factory-warehouse.jpg");
+            }
+            .foto3 {
+                background-size: 100% 100%;
+                background-image: url("../imagenes/deposito.jpg");
+            }
         }
     }
     .trayectoria {
@@ -399,7 +440,8 @@ contacto {
         margin: 30px 0;
     }
     .imagen {
-        @include margin(30%, 0);
+        @include margin(30%,
+        0);
         transform: scale(1);
         text-decoration: none;
     }
@@ -419,7 +461,8 @@ contacto {
             margin-bottom: 5px;
         }
         .contacto__mapa {
-            @include size(95%, 70%);
+            @include size(95%,
+            70%);
         }
         .contacto__fondo--mapa {
             height: 500px;
@@ -442,9 +485,18 @@ contacto {
     .carousel {
         .carousel-item {
             height: 45vh;
-        }
-        .carousel-item img {
-            height: 45vh;
+            .foto1 {
+                background-size: cover;
+                background-image: url("../imagenes/funlaux-xs.jpg");
+            }
+            .foto2 {
+                background-size: 100% 100%;
+                background-image: url("../imagenes/large-steel-factory-warehouse.jpg");
+            }
+            .foto3 {
+                background-size: 100% 100%;
+                background-image: url("../imagenes/deposito.jpg");
+            }
         }
     }
     .galeria__imagenes {
@@ -464,7 +516,8 @@ contacto {
         margin: 0 1px;
     }
     .imagen {
-        @include margin(25%, 0);
+        @include margin(25%,
+        0);
     }
     .footer__parrafo {
         margin: auto 10px;
@@ -481,9 +534,16 @@ contacto {
     .carousel {
         .carousel-item {
             height: 50vh;
-        }
-        .carousel-item img {
-            height: 50vh;
+            .foto1 {
+                background-size: cover;
+                background-image: url("../imagenes/funlaux v7.jpg");
+            }
+            .foto2 {
+                background-image: url("../imagenes/large-steel-factory-warehouse.jpg");
+            }
+            .foto3 {
+                background-image: url("../imagenes/deposito.jpg");
+            }
         }
     }
     .trayectoria__historia,
@@ -520,7 +580,8 @@ contacto {
         margin: auto 10px;
     }
     .imagen {
-        @include margin(20%, 0);
+        @include margin(20%,
+        0);
         transform: scale(1.3);
     }
 }
@@ -533,6 +594,10 @@ contacto {
     .carousel {
         .carousel-item {
             height: 90vh;
+            .foto1 {
+                background-size: cover;
+                background-image: url("../imagenes/funlaux-xs.jpg");
+            }
         }
         .carousel-item img {
             height: 90vh;
@@ -544,7 +609,8 @@ contacto {
         }
     }
     .imagen {
-        @include margin(15%, 0);
+        @include margin(15%,
+        0);
         transform: scale(1.5);
     }
     .contacto {
