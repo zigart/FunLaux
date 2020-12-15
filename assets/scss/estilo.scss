@@ -1,458 +1,459 @@
-                    /*Medidas default*/
-                    
-                    * {
-                        margin: 0;
-                        padding: 0;
-                        box-sizing: border-box;
-                    }
-                    
-                    .container-fluid {
-                        margin: 0;
-                        padding: 0;
-                    }
-                    /***************************************************variables**********************************************************/
-                    
-                    $bgcolor: white;
-                    $tituloColor:rgb(0, 0, 0);
-                    $subtituloColor:rgb(56, 56, 56);
-                    $margin: 200px 0px;
-                    @mixin size ($width, $height) {
-                        width: $width;
-                        height: $height;
-                    }
-                    
-                    @mixin margin ($topBot, $leftRight) {
-                        margin: $topBot $leftRight;
-                    }
-                    /***************************************Diseño general de todas las paginas********************************************/
-                    
-                    body {
-                        font-style: normal;
-                        font-family: 'Quicksand', sans-serif;
-                        letter-spacing: 2px;
-                        background-color: white;
-                    }
-                    
-                    .subtitulos {
-                        color: subtituloColor;
-                        font-family: 'Roboto', sans-serif;
-                        text-align: center;
-                    }
-                    
-                    main {
-                        min-height: 80vh;
-                        background-color: $bgcolor;
-                        @if $bgcolor==black {
-                            color: white;
+                        /*Medidas default*/
+                        
+                        * {
+                            margin: 0;
+                            padding: 0;
+                            box-sizing: border-box;
                         }
-                        @else {
-                            color: black;
+                        
+                        .container-fluid {
+                            margin: 0;
+                            padding: 0;
                         }
-                    }
-                    
-                    @each $subtitle in trayectoria,
-                    servicios,
-                    contacto {
-                        .#{$subtitle}__subtitulo {
-                            color: $subtituloColor;
-                            @include margin(30px, 0);
-                            font-size: 30px;
+                        /***************************************************variables**********************************************************/
+                        
+                        $bgcolor: white;
+                        $tituloColor:rgb(0, 0, 0);
+                        $subtituloColor:rgb(56, 56, 56);
+                        $margin: 200px 0px;
+                        @mixin size ($width, $height) {
+                            width: $width;
+                            height: $height;
                         }
-                    }
-                    
-                    @each $title in trayectoria,
-                    servicios,
-                    galeria,
-                    contacto {
-                        .#{$title}__titulo {
-                            color: $tituloColor;
+                        
+                        @mixin margin ($topBot, $leftRight) {
+                            margin: $topBot $leftRight;
+                        }
+                        /***************************************Diseño general de todas las paginas********************************************/
+                        
+                        body {
+                            font-style: normal;
+                            font-family: 'Quicksand', sans-serif;
+                            letter-spacing: 2px;
+                            background-color: white;
+                        }
+                        
+                        .subtitulos {
+                            color: subtituloColor;
                             font-family: 'Roboto', sans-serif;
-                            @include margin(300px, 0);
-                            font-size: 40px;
-                            animation-name: titulo;
-                            animation-iteration-count: 1;
-                            animation-timing-function: ease-in-out;
-                            animation-duration: 1s;
-                            animation-delay: 0s;
+                            text-align: center;
                         }
-                    }
-                    /*********************************************Animaciones********************************************************/
-                    
-                    @keyframes titulo {
-                        0% {
-                            transform: translateY(-100px);
-                        }
-                        25% {
-                            transform: translateY(0);
-                        }
-                        50% {
-                            transform: translateY(-20px);
-                        }
-                        100% {
-                            transform: translateY(0);
-                        }
-                    }
-                    
-                    @keyframes ampliar {
-                        0% {
-                            transform: scale(1);
-                        }
-                        100% {
-                            transform: scale(1.3);
-                        }
-                    }
-                    /********************************************Estilo del header***************************************************/
-                    
-                    .header {
-                        background-color: rgb(0, 0, 0);
-                        border-bottom: 8px double rgb(255, 255, 255);
-                        nav {
-                            .navegacion__logo {
-                                font-family: 'Great Vibes', cursive;
-                                font-size: 2rem;
-                                text-decoration: none;
-                                color: rgb(255, 255, 255);
+                        
+                        main {
+                            min-height: 80vh;
+                            background-color: $bgcolor;
+                            @if $bgcolor==black {
+                                color: white;
                             }
-                            ul {
-                                li {
-                                    margin: 0 10px;
+                            @else {
+                                color: black;
+                            }
+                        }
+                        
+                        @each $subtitle in trayectoria,
+                        servicios,
+                        contacto {
+                            .#{$subtitle}__subtitulo {
+                                color: $subtituloColor;
+                                @include margin(30px, 0);
+                                font-size: 30px;
+                            }
+                        }
+                        
+                        @each $title in trayectoria,
+                        servicios,
+                        galeria,
+                        contacto {
+                            .#{$title}__titulo {
+                                color: $tituloColor;
+                                font-family: 'Roboto', sans-serif;
+                                @include margin(300px, 0);
+                                font-size: 40px;
+                                animation-name: titulo;
+                                animation-iteration-count: 1;
+                                animation-timing-function: ease-in-out;
+                                animation-duration: 1s;
+                                animation-delay: 0s;
+                            }
+                        }
+                        /*********************************************Animaciones********************************************************/
+                        
+                        @keyframes titulo {
+                            0% {
+                                transform: translateY(-100px);
+                            }
+                            25% {
+                                transform: translateY(0);
+                            }
+                            50% {
+                                transform: translateY(-20px);
+                            }
+                            100% {
+                                transform: translateY(0);
+                            }
+                        }
+                        
+                        @keyframes ampliar {
+                            0% {
+                                transform: scale(1);
+                            }
+                            100% {
+                                transform: scale(1.3);
+                            }
+                        }
+                        /********************************************Estilo del header***************************************************/
+                        
+                        .header {
+                            background-color: rgb(0, 0, 0);
+                            border-bottom: 8px double rgb(255, 255, 255);
+                            nav {
+                                .navegacion__logo {
+                                    font-family: 'Great Vibes', cursive;
+                                    font-size: 2rem;
+                                    text-decoration: none;
+                                    color: rgb(255, 255, 255);
+                                }
+                                ul {
+                                    li {
+                                        margin: 0 10px;
+                                    }
                                 }
                             }
                         }
-                    }
-                    /***********************************************Diseño de inicio**********************************************/
-                    
-                    .inicio {
-                        background: rgb(173, 173, 173);
-                        background: linear-gradient(0deg, rgba(173, 173, 173, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(173, 173, 173, 1) 100%);
-                        #h1Inicio {
-                            visibility: hidden;
+                        /***********************************************Diseño de inicio**********************************************/
+                        
+                        .inicio {
+                            background: rgb(173, 173, 173);
+                            background: linear-gradient(0deg, rgba(173, 173, 173, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(173, 173, 173, 1) 100%);
+                            #h1Inicio {
+                                visibility: hidden;
+                            }
                         }
-                    }
-                    /*********************************************Diseño de trayectoria******************************************/
-                    
-                    .trayectoria {
-                        overflow: hidden;
-                        img {
-                            margin-top: 200px;
-                            border-radius: 40px;
-                        }
-                        .trayectoria__1 {
-                            margin: $margin;
-                            padding: 10px;
-                        }
-                        .trayectoria__2 {
-                            margin: $margin;
-                            margin-top: 100px;
-                            padding: 10px;
-                        }
-                    }
-                    /******************************************************Diseño servicios*************************************************/
-                    
-                    .servicios {
-                        overflow: hidden;
-                        @for $a from 1 through 2 {
-                            .servicios__#{$a} {
+                        /*********************************************Diseño de trayectoria******************************************/
+                        
+                        .trayectoria {
+                            overflow: hidden;
+                            img {
+                                margin-top: 200px;
+                                border-radius: 40px;
+                            }
+                            .trayectoria__1 {
                                 margin: $margin;
                                 padding: 10px;
                             }
-                        }
-                        .servicios__imagenes {
-                            width: 100%;
-                            height: auto;
-                            border-radius: 80%;
-                        }
-                        .servicios__parrafos {
-                            @include margin(80px, 0);
-                        }
-                        table {
-                            thead {
-                                tr {
-                                    th {
-                                        color: rgb(255, 254, 254);
-                                    }
-                                }
-                            }
-                            tbody {
-                                tr {
-                                    td {
-                                        color: rgb(184, 184, 184);
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    /*********************************************Diseño de galeria**********************************************/
-                    
-                    .galeria__titulo {
-                        margin-bottom: 0;
-                    }
-                    
-                    .galeria {
-                        overflow: hidden;
-                        width: 90%;
-                        list-style: none;
-                        margin: auto;
-                        margin-top: 500px;
-                        margin-bottom: 150px;
-                        padding: 20px;
-                        box-sizing: border-box;
-                        display: flex;
-                        flex-wrap: wrap;
-                        justify-content: space-around;
-                    }
-                    
-                    .galeria li {
-                        margin: 5px;
-                    }
-                    
-                    .galeria img {
-                        width: 500px;
-                        height: auto;
-                    }
-                    /*Estilos del modal*/
-                    
-                    .modal {
-                        display: none;
-                    }
-                    
-                    .modal:target {
-                        display: block;
-                        position: fixed;
-                        background: rgba(0, 0, 0, 0.8);
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                    }
-                    
-                    .modal h3 {
-                        color: #fff;
-                        font-size: 30px;
-                        text-align: center;
-                        margin: 15px 0;
-                    }
-                    
-                    .modal a {
-                        text-decoration: none;
-                    }
-                    
-                    .imagen {
-                        @include margin(15%, 0);
-                        width: 100%;
-                        height: auto;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                    }
-                    
-                    .imagen a {
-                        color: #fff;
-                        font-size: 40px;
-                        text-decoration: none;
-                        margin: 0 10px;
-                    }
-                    
-                    .imagen a:nth-child(2) {
-                        margin: 0;
-                        height: 100%;
-                        flex-shrink: 2;
-                    }
-                    
-                    .imagen {
-                        img {
-                            width: 500px;
-                            height: 100%;
-                            max-width: 100%;
-                            border: 5px solid #fff;
-                            box-sizing: border-box;
-                        }
-                    }
-                    
-                    .cerrar {
-                        display: block;
-                        float: right;
-                        @include margin(1%, 1%);
-                        background: #fff;
-                        width: 30px;
-                        height: 30px;
-                        text-align: end;
-                        text-decoration: none;
-                        font-size: 25px;
-                        color: rgb(0, 0, 0);
-                        padding: 5px;
-                        border-radius: 50%;
-                        line-height: 22px;
-                    }
-                    /********************************************Diseño de contacto*********************************************/
-                    
-                    .contacto {
-                        overflow: hidden;
-                        background: rgb(173, 173, 173);
-                        background: linear-gradient(0deg, rgba(173, 173, 173, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(173, 173, 173, 1) 100%);
-                        .contacto__fondo {
-                            padding: 10px;
-                            width: 80%;
-                            background-color: rgba(0, 0, 0, 0.39);
-                            margin-bottom: 20px;
-                        }
-                        .contacto__mapa {
-                            @include size(90%, 70%);
-                        }
-                        .form-group {
-                            button {
-                                margin: 0 20px;
-                            }
-                        }
-                        section {
-                            margin-bottom: 150px;
-                            div {
-                                p {
-                                    color: white;
-                                }
-                                label {
-                                    color: white;
-                                }
-                            }
-                        }
-                    }
-                    /******************************************Diseño del footer****************************************************/
-                    
-                    .footer {
-                        position: relative;
-                        background-color: black;
-                        border-top: 8px double white;
-                        color: rgb(156, 156, 156);
-                        bottom: 0;
-                        .footer__placeholdersvg {
-                            @include size(30px, 30px);
-                        }
-                        .footer__telefonosvg {
-                            @extend .footer__placeholdersvg;
-                        }
-                        .footer__sobresvg {
-                            @extend .footer__placeholdersvg
-                        }
-                        .footer__email {
-                            margin: auto;
-                        }
-                        .footer__parrafo--numeros {
-                            height: 60px;
-                        }
-                    }
-                    /* adaptaciones del responsive */
-                    /*xs*/
-                    
-                    @media (max-width:575px) {
-                        .bordeCarrusel {
-                            border: 3px double rgb(156, 156, 156);
-                        }
-                        .carousel {
-                            .carousel-item {
-                                height: 45vh;
-                                img {
-                                    height: 45vh;
-                                }
-                            }
-                        }
-                        .trayectoria {
-                            img {
-                                margin-top: 50px;
-                            }
-                            .trayectoria__1 {
-                                margin-top: 50px;
-                                padding: 10px;
-                            }
                             .trayectoria__2 {
-                                margin-top: 50px;
+                                margin: $margin;
+                                margin-top: 100px;
                                 padding: 10px;
                             }
                         }
-                        .galeria__imagenes {
-                            height: 210px;
-                            margin: 30px 0;
+                        /******************************************************Diseño servicios*************************************************/
+                        
+                        .servicios {
+                            overflow: hidden;
+                            @for $a from 1 through 2 {
+                                .servicios__#{$a} {
+                                    margin: $margin;
+                                    padding: 10px;
+                                }
+                            }
+                            .servicios__imagenes {
+                                width: 100%;
+                                height: auto;
+                                border-radius: 80%;
+                            }
+                            .servicios__parrafos {
+                                @include margin(80px, 0);
+                            }
+                            table {
+                                thead {
+                                    tr {
+                                        th {
+                                            color: rgb(255, 254, 254);
+                                        }
+                                    }
+                                }
+                                tbody {
+                                    tr {
+                                        td {
+                                            color: rgb(184, 184, 184);
+                                        }
+                                    }
+                                }
+                            }
                         }
-                        .imagen {
-                            @include margin(30%, 0);
-                            transform: scale(1);
+                        /*********************************************Diseño de galeria**********************************************/
+                        
+                        .galeria__titulo {
+                            margin-bottom: 0;
+                        }
+                        
+                        .galeria {
+                            overflow: hidden;
+                            width: 90%;
+                            list-style: none;
+                            margin: auto;
+                            margin-top: 500px;
+                            margin-bottom: 150px;
+                            padding: 20px;
+                            box-sizing: border-box;
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: space-around;
+                        }
+                        
+                        .galeria li {
+                            margin: 5px;
+                        }
+                        
+                        .galeria img {
+                            width: 500px;
+                            height: auto;
+                        }
+                        /*Estilos del modal*/
+                        
+                        .modal {
+                            display: none;
+                        }
+                        
+                        .modal:target {
+                            display: block;
+                            position: fixed;
+                            background: rgba(0, 0, 0, 0.8);
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                        }
+                        
+                        .modal h3 {
+                            color: #fff;
+                            font-size: 30px;
+                            text-align: center;
+                            margin: 15px 0;
+                        }
+                        
+                        .modal a {
                             text-decoration: none;
                         }
-                        .contacto {
-                            padding: 20px;
-                            section {
-                                margin-bottom: 50px;
-                                padding: 5px;
-                            }
-                            h1 {
-                                font-size: 30px;
-                            }
-                            .contacto__fondo {
-                                border: none;
-                                padding: 5px;
-                                width: 100%;
-                                margin-bottom: 5px;
-                            }
-                            .contacto__mapa {
-                                @include size(95%, 70%);
-                            }
-                            .contacto__fondo--mapa {
-                                height: 500px;
-                                margin: 20px 0;
-                            }
-                        }
-                        .footer__parrafo {
-                            margin: auto 0px;
+                        
+                        .imagen {
+                            @include margin(15%, 0);
+                            width: 100%;
+                            height: auto;
+                            display: flex;
+                            justify-content: center;
                             align-items: center;
                         }
-                    }
-                    /*sm*/
-                    
-                    @media (min-width:576px) {
-                        .bordeCarrusel {
-                            border: 3px double rgb(156, 156, 156);
+                        
+                        .imagen a {
+                            color: #fff;
+                            font-size: 40px;
+                            text-decoration: none;
+                            margin: 0 10px;
                         }
-                        .carousel {
-                            .carousel-item {
-                                height: 50vh;
-                                img {
-                                    height: 50vh;
+                        
+                        .imagen a:nth-child(2) {
+                            margin: 0;
+                            height: 100%;
+                            flex-shrink: 2;
+                        }
+                        
+                        .imagen {
+                            img {
+                                width: 500px;
+                                height: 100%;
+                                max-width: 100%;
+                                border: 5px solid #fff;
+                                box-sizing: border-box;
+                            }
+                        }
+                        
+                        .cerrar {
+                            display: block;
+                            float: right;
+                            @include margin(1%, 1%);
+                            background: #fff;
+                            width: 30px;
+                            height: 30px;
+                            text-align: end;
+                            text-decoration: none;
+                            font-size: 25px;
+                            color: rgb(0, 0, 0);
+                            padding: 5px;
+                            border-radius: 50%;
+                            line-height: 22px;
+                        }
+                        /********************************************Diseño de contacto*********************************************/
+                        
+                        .contacto {
+                            overflow: hidden;
+                            background: rgb(173, 173, 173);
+                            background: linear-gradient(0deg, rgba(173, 173, 173, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(173, 173, 173, 1) 100%);
+                            .contacto__fondo {
+                                padding: 10px;
+                                width: 80%;
+                                background-color: rgba(0, 0, 0, 0.39);
+                                margin-bottom: 20px;
+                            }
+                            .contacto__mapa {
+                                @include size(90%, 70%);
+                            }
+                            .form-group {
+                                button {
+                                    margin: 0 20px;
+                                }
+                            }
+                            section {
+                                margin-bottom: 150px;
+                                div {
+                                    p {
+                                        color: white;
+                                    }
+                                    label {
+                                        color: white;
+                                    }
                                 }
                             }
                         }
-                        .galeria__imagenes {
-                            height: 210px;
-                            margin: 30px 0;
-                        }
-                        .contacto {
-                            .contacto__formulario {
-                                margin-top: 40px;
+                        /******************************************Diseño del footer****************************************************/
+                        
+                        .footer {
+                            position: relative;
+                            background-color: black;
+                            border-top: 8px double white;
+                            color: rgb(156, 156, 156);
+                            bottom: 0;
+                            .footer__placeholdersvg {
+                                @include size(30px, 30px);
                             }
-                            .contacto__fondo--mapa {
-                                height: 500px;
-                                margin: 20px 0;
+                            .footer__telefonosvg {
+                                @extend .footer__placeholdersvg;
+                            }
+                            .footer__sobresvg {
+                                @extend .footer__placeholdersvg
+                            }
+                            .footer__email {
+                                margin: auto;
+                            }
+                            .footer__parrafo--numeros {
+                                height: 60px;
                             }
                         }
-                        .footer__parrafo {
-                            margin: 0 1px;
-                        }
-                        .imagen {
-                            @include margin(25%, 0);
-                        }
-                        .footer__parrafo {
-                            margin: auto 10px;
-                        }
-                    }
-                    /*md*/
-                    
-                    @media (min-width:768px) {
-                        .bordeCarrusel {
-                            border: 3px double rgb(156, 156, 156);
-                        }
-                        .carousel {
-                            .carousel-item {
-                                height: 60vh;
-                                img {
+                        /* adaptaciones del responsive */
+                        /*xs*/
+                        
+                        @media (max-width:575px) {
+                            .bordeCarrusel {
+                                border: 3px double rgb(156, 156, 156);
+                            }
+                            .carousel {
+                                .carousel-item {
                                     height: 60vh;
+                                }
+                                .carousel-item img {
+                                    height: 60vh;
+                                }
+                            }
+                            .trayectoria {
+                                img {
+                                    margin-top: 50px;
+                                }
+                                .trayectoria__1 {
+                                    margin-top: 50px;
+                                    padding: 10px;
+                                }
+                                .trayectoria__2 {
+                                    margin-top: 50px;
+                                    padding: 10px;
+                                }
+                            }
+                            .galeria__imagenes {
+                                height: 210px;
+                                margin: 30px 0;
+                            }
+                            .imagen {
+                                @include margin(30%, 0);
+                                transform: scale(1);
+                                text-decoration: none;
+                            }
+                            .contacto {
+                                padding: 20px;
+                                section {
+                                    margin-bottom: 50px;
+                                    padding: 5px;
+                                }
+                                h1 {
+                                    font-size: 30px;
+                                }
+                                .contacto__fondo {
+                                    border: none;
+                                    padding: 5px;
+                                    width: 100%;
+                                    margin-bottom: 5px;
+                                }
+                                .contacto__mapa {
+                                    @include size(95%, 70%);
+                                }
+                                .contacto__fondo--mapa {
+                                    height: 500px;
+                                    margin: 20px 0;
+                                }
+                            }
+                            .footer__parrafo {
+                                margin: auto 0px;
+                                align-items: center;
+                            }
+                        }
+                        /*sm*/
+                        
+                        @media (min-width:576px) {
+                            .bordeCarrusel {
+                                border: 3px double rgb(156, 156, 156);
+                            }
+                            .carousel {
+                                .carousel-item {
+                                    height: 70vh;
+                                }
+                                .carousel-item img {
+                                    height: 70vh;
+                                }
+                            }
+                            .galeria__imagenes {
+                                height: 210px;
+                                margin: 30px 0;
+                            }
+                            .contacto {
+                                .contacto__formulario {
+                                    margin-top: 40px;
+                                }
+                                .contacto__fondo--mapa {
+                                    height: 500px;
+                                    margin: 20px 0;
+                                }
+                            }
+                            .footer__parrafo {
+                                margin: 0 1px;
+                            }
+                            .imagen {
+                                @include margin(25%, 0);
+                            }
+                            .footer__parrafo {
+                                margin: auto 10px;
+                            }
+                        }
+                        /*md*/
+                        
+                        @media (min-width:768px) {
+                            .bordeCarrusel {
+                                border: 3px double rgb(156, 156, 156);
+                            }
+                            .carousel {
+                                .carousel-item {
+                                    height: 90vh;
+                                }
+                                .carousel-item img {
+                                    height: 90vh;
                                 }
                             }
                             .trayectoria__historia,
@@ -493,45 +494,41 @@
                                 transform: scale(1.3);
                             }
                         }
-                    }
-                    
-                    // Desktop
-                    @media (min-width:992px) {
-                        .bordeCarrusel {
-                            border: none;
-                        }
-                        .carousel {
-                            .carousel-item {
-                                height: 90vh;
-                                img {
+                        
+                        // Desktop
+                        @media (min-width:992px) {
+                            .bordeCarrusel {
+                                border: none;
+                            }
+                            .carousel {
+                                .carousel-item {
+                                    height: 90vh;
+                                }
+                                .carousel-item img {
                                     height: 90vh;
                                 }
                             }
-                            .carousel-item img {
-                                height: 90vh;
-                            }
-                        }
-                        .contacto {
-                            h1 {
-                                font-size: 40px;
-                            }
-                        }
-                        .imagen {
-                            @include margin(15%, 0);
-                            transform: scale(1.5);
-                        }
-                        .contacto {
-                            .contacto__fondo {
-                                height: 100%;
-                                margin-top: 0;
-                            }
-                            .form-group {
-                                button {
-                                    margin-top: 20px;
+                            .contacto {
+                                h1 {
+                                    font-size: 40px;
                                 }
                             }
+                            .imagen {
+                                @include margin(15%, 0);
+                                transform: scale(1.5);
+                            }
+                            .contacto {
+                                .contacto__fondo {
+                                    height: 100%;
+                                    margin-top: 0;
+                                }
+                                .form-group {
+                                    button {
+                                        margin-top: 20px;
+                                    }
+                                }
+                            }
+                            .footer__parrafo {
+                                margin: auto 10px;
+                            }
                         }
-                        .footer__parrafo {
-                            margin: auto 10px;
-                        }
-                    }

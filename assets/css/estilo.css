@@ -286,9 +286,9 @@ main {
   .bordeCarrusel {
     border: 3px double #9c9c9c; }
   .carousel .carousel-item {
-    height: 45vh; }
-    .carousel .carousel-item img {
-      height: 45vh; }
+    height: 60vh; }
+  .carousel .carousel-item img {
+    height: 60vh; }
   .trayectoria img {
     margin-top: 50px; }
   .trayectoria .trayectoria__1 {
@@ -331,9 +331,9 @@ main {
   .bordeCarrusel {
     border: 3px double #9c9c9c; }
   .carousel .carousel-item {
-    height: 50vh; }
-    .carousel .carousel-item img {
-      height: 50vh; }
+    height: 70vh; }
+  .carousel .carousel-item img {
+    height: 70vh; }
   .galeria__imagenes {
     height: 210px;
     margin: 30px 0; }
@@ -354,31 +354,31 @@ main {
   .bordeCarrusel {
     border: 3px double #9c9c9c; }
   .carousel .carousel-item {
-    height: 60vh; }
-    .carousel .carousel-item img {
-      height: 60vh; }
-  .carousel .trayectoria__historia,
-  .carousel .trayectoria__experiencias,
-  .carousel .trayectoria__imagenes {
+    height: 90vh; }
+  .carousel .carousel-item img {
+    height: 90vh; }
+  .trayectoria__historia,
+  .trayectoria__experiencias,
+  .trayectoria__imagenes {
     margin-bottom: 200px; }
-  .carousel .trayectoria img {
+  .trayectoria img {
     margin-top: 50px; }
-  .carousel .trayectoria .trayectoria__1 {
+  .trayectoria .trayectoria__1 {
     margin-top: 200px;
     padding: 10px; }
-  .carousel .trayectoria .trayectoria__2 {
+  .trayectoria .trayectoria__2 {
     margin-top: 200px;
     padding: 10px; }
-  .carousel .servicios__imagenes {
+  .servicios__imagenes {
     width: 100%; }
-  .carousel .contacto .contacto__formulario {
+  .contacto .contacto__formulario {
     margin-top: 40px; }
-  .carousel .contacto .contacto__fondo--mapa {
+  .contacto .contacto__fondo--mapa {
     height: 600px;
     margin: 20px 0; }
-  .carousel .footer__parrafo {
+  .footer__parrafo {
     margin: auto 10px; }
-  .carousel .imagen {
+  .imagen {
     margin: 20% 0;
     transform: scale(1.3); } }
 
@@ -387,8 +387,6 @@ main {
     border: none; }
   .carousel .carousel-item {
     height: 90vh; }
-    .carousel .carousel-item img {
-      height: 90vh; }
   .carousel .carousel-item img {
     height: 90vh; }
   .contacto h1 {
