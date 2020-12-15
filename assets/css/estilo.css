@@ -119,30 +119,6 @@ main {
 .inicio {
   background: #adadad;
   background: linear-gradient(0deg, #adadad 0%, white 50%, #adadad 100%); }
-  .inicio .foto1 {
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("../imagenes/funlaux v7.jpg"); }
-  .inicio .foto2 {
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("../imagenes/large-steel-factory-warehouse.jpg"); }
-  .inicio .foto3 {
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("../imagenes/deposito.jpg"); }
   .inicio #h1Inicio {
     visibility: hidden; }
 
@@ -310,16 +286,9 @@ main {
   .bordeCarrusel {
     border: 3px double #9c9c9c; }
   .carousel .carousel-item {
-    height: 40vh; }
-    .carousel .carousel-item .foto1 {
-      background-size: 100% 100%;
-      background-image: url("../imagenes/funlaux v7.jpg"); }
-    .carousel .carousel-item .foto2 {
-      background-size: 100% 100%;
-      background-image: url("../imagenes/large-steel-factory-warehouse.jpg"); }
-    .carousel .carousel-item .foto3 {
-      background-size: 100% 100%;
-      background-image: url("../imagenes/deposito.jpg"); }
+    height: 45vh; }
+    .carousel .carousel-item img {
+      height: 45vh; }
   .trayectoria img {
     margin-top: 50px; }
   .trayectoria .trayectoria__1 {
@@ -362,16 +331,9 @@ main {
   .bordeCarrusel {
     border: 3px double #9c9c9c; }
   .carousel .carousel-item {
-    height: 45vh; }
-    .carousel .carousel-item .foto1 {
-      background-size: cover;
-      background-image: url("../imagenes/funlaux v7.jpg"); }
-    .carousel .carousel-item .foto2 {
-      background-size: 100% 100%;
-      background-image: url("../imagenes/large-steel-factory-warehouse.jpg"); }
-    .carousel .carousel-item .foto3 {
-      background-size: 100% 100%;
-      background-image: url("../imagenes/deposito.jpg"); }
+    height: 50vh; }
+    .carousel .carousel-item img {
+      height: 50vh; }
   .galeria__imagenes {
     height: 210px;
     margin: 30px 0; }
@@ -392,36 +354,31 @@ main {
   .bordeCarrusel {
     border: 3px double #9c9c9c; }
   .carousel .carousel-item {
-    height: 50vh; }
-    .carousel .carousel-item .foto1 {
-      background-size: cover;
-      background-image: url("../imagenes/funlaux v7.jpg"); }
-    .carousel .carousel-item .foto2 {
-      background-image: url("../imagenes/large-steel-factory-warehouse.jpg"); }
-    .carousel .carousel-item .foto3 {
-      background-image: url("../imagenes/deposito.jpg"); }
-  .trayectoria__historia,
-  .trayectoria__experiencias,
-  .trayectoria__imagenes {
+    height: 60vh; }
+    .carousel .carousel-item img {
+      height: 60vh; }
+  .carousel .trayectoria__historia,
+  .carousel .trayectoria__experiencias,
+  .carousel .trayectoria__imagenes {
     margin-bottom: 200px; }
-  .trayectoria img {
+  .carousel .trayectoria img {
     margin-top: 50px; }
-  .trayectoria .trayectoria__1 {
+  .carousel .trayectoria .trayectoria__1 {
     margin-top: 200px;
     padding: 10px; }
-  .trayectoria .trayectoria__2 {
+  .carousel .trayectoria .trayectoria__2 {
     margin-top: 200px;
     padding: 10px; }
-  .servicios__imagenes {
+  .carousel .servicios__imagenes {
     width: 100%; }
-  .contacto .contacto__formulario {
+  .carousel .contacto .contacto__formulario {
     margin-top: 40px; }
-  .contacto .contacto__fondo--mapa {
+  .carousel .contacto .contacto__fondo--mapa {
     height: 600px;
     margin: 20px 0; }
-  .footer__parrafo {
+  .carousel .footer__parrafo {
     margin: auto 10px; }
-  .imagen {
+  .carousel .imagen {
     margin: 20% 0;
     transform: scale(1.3); } }
 
@@ -430,9 +387,8 @@ main {
     border: none; }
   .carousel .carousel-item {
     height: 90vh; }
-    .carousel .carousel-item .foto1 {
-      background-size: cover;
-      background-image: url("../imagenes/funlaux v7.jpg"); }
+    .carousel .carousel-item img {
+      height: 90vh; }
   .carousel .carousel-item img {
     height: 90vh; }
   .contacto h1 {
