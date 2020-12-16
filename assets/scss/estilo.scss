@@ -154,6 +154,7 @@
                             @for $a from 1 through 2 {
                                 .servicios__#{$a} {
                                     margin: $margin;
+                                    margin-bottom: 20px;
                                     padding: 10px;
                                 }
                             }

@@ -141,9 +141,11 @@ main {
   overflow: hidden; }
   .servicios .servicios__1 {
     margin: 200px 0px;
+    margin-bottom: 20px;
     padding: 10px; }
   .servicios .servicios__2 {
     margin: 200px 0px;
+    margin-bottom: 20px;
     padding: 10px; }
   .servicios .servicios__imagenes {
     width: 100%;
