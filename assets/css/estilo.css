@@ -42,7 +42,7 @@ main {
   margin: 30px 0;
   font-size: 30px; }
 
-.trayectoria__titulo {
+.nosotros__titulo {
   color: black;
   font-family: 'Roboto', sans-serif;
   margin: 300px 0;
@@ -122,29 +122,26 @@ main {
   .inicio #h1Inicio {
     visibility: hidden; }
 
-/*********************************************Diseño de trayectoria******************************************/
-.trayectoria {
+/*********************************************Diseño de Nosotros******************************************/
+.nosotros {
   overflow: hidden; }
-  .trayectoria img {
-    margin-top: 200px;
+  .nosotros .nosotros__descripcion {
+    text-align: center;
+    margin: 250px 0px;
+    padding: 50px;
+    font-size: 20px; }
+  .nosotros .nosotros__imagen {
     border-radius: 40px; }
-  .trayectoria .trayectoria__1 {
-    margin: 200px 0px;
-    padding: 10px; }
-  .trayectoria .trayectoria__2 {
-    margin: 200px 0px;
-    margin-top: 100px;
-    padding: 10px; }
 
 /******************************************************Diseño servicios*************************************************/
 .servicios {
   overflow: hidden; }
   .servicios .servicios__1 {
-    margin: 200px 0px;
+    margin: 250px 0px;
     margin-bottom: 20px;
     padding: 10px; }
   .servicios .servicios__2 {
-    margin: 200px 0px;
+    margin: 250px 0px;
     margin-bottom: 20px;
     padding: 10px; }
   .servicios .servicios__imagenes {
@@ -291,13 +288,13 @@ main {
     height: 60vh; }
   .carousel .carousel-item img {
     height: 60vh; }
-  .trayectoria img {
+  .nosotros .nosotros__imagen {
     margin-top: 50px; }
-  .trayectoria .trayectoria__1 {
-    margin-top: 50px;
+  .nosotros .nosotros__1 {
+    margin: 50px 0px;
     padding: 10px; }
-  .trayectoria .trayectoria__2 {
-    margin-top: 50px;
+  .nosotros .nosotros__2 {
+    margin: 50px 0;
     padding: 10px; }
   .galeria__imagenes {
     height: 210px;
@@ -336,6 +333,14 @@ main {
     height: 70vh; }
   .carousel .carousel-item img {
     height: 70vh; }
+  .nosotros .nosotros__imagen {
+    margin-top: 50px; }
+  .nosotros .nosotros__1 {
+    margin: 50px 0px;
+    padding: 10px; }
+  .nosotros .nosotros__2 {
+    margin: 50px 0;
+    padding: 10px; }
   .galeria__imagenes {
     height: 210px;
     margin: 30px 0; }
@@ -359,17 +364,13 @@ main {
     height: 90vh; }
   .carousel .carousel-item img {
     height: 90vh; }
-  .trayectoria__historia,
-  .trayectoria__experiencias,
-  .trayectoria__imagenes {
-    margin-bottom: 200px; }
-  .trayectoria img {
+  .nosotros .nosotros__imagen {
     margin-top: 50px; }
-  .trayectoria .trayectoria__1 {
-    margin-top: 200px;
+  .nosotros .nosotros__1 {
+    margin: 50px 0px;
     padding: 10px; }
-  .trayectoria .trayectoria__2 {
-    margin-top: 200px;
+  .nosotros .nosotros__2 {
+    margin: 50px 0;
     padding: 10px; }
   .servicios__imagenes {
     width: 100%; }
@@ -391,6 +392,14 @@ main {
     height: 90vh; }
   .carousel .carousel-item img {
     height: 90vh; }
+  .nosotros .nosotros__imagen--1 {
+    margin-top: 250px; }
+  .nosotros .nosotros__1 {
+    margin-top: 250px;
+    padding: 10px; }
+  .nosotros .nosotros__2 {
+    margin: 250px 0px;
+    padding: 10px; }
   .contacto h1 {
     font-size: 40px; }
   .imagen {
