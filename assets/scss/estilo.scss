@@ -69,6 +69,7 @@
          color: $tituloColor;
          font-family: 'Roboto', sans-serif;
          @include margin(300px, 0);
+         margin-bottom: 100px;
          font-size: 40px;
          animation-name: titulo;
          animation-iteration-count: 1;
@@ -516,6 +517,10 @@
          }
      }
      .nosotros {
+         .nosotros__imagen {
+             margin-top: 0px;
+             margin-bottom: 50px;
+         }
          .nosotros__imagen--1 {
              margin-top: $marginTop;
          }

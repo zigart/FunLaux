@@ -46,6 +46,7 @@ main {
   color: black;
   font-family: 'Roboto', sans-serif;
   margin: 300px 0;
+  margin-bottom: 100px;
   font-size: 40px;
   animation-name: titulo;
   animation-iteration-count: 1;
@@ -57,6 +58,7 @@ main {
   color: black;
   font-family: 'Roboto', sans-serif;
   margin: 300px 0;
+  margin-bottom: 100px;
   font-size: 40px;
   animation-name: titulo;
   animation-iteration-count: 1;
@@ -68,6 +70,7 @@ main {
   color: black;
   font-family: 'Roboto', sans-serif;
   margin: 300px 0;
+  margin-bottom: 100px;
   font-size: 40px;
   animation-name: titulo;
   animation-iteration-count: 1;
@@ -79,6 +82,7 @@ main {
   color: black;
   font-family: 'Roboto', sans-serif;
   margin: 300px 0;
+  margin-bottom: 100px;
   font-size: 40px;
   animation-name: titulo;
   animation-iteration-count: 1;
@@ -393,6 +397,9 @@ main {
     height: 90vh; }
   .carousel .carousel-item img {
     height: 90vh; }
+  .nosotros .nosotros__imagen {
+    margin-top: 0px;
+    margin-bottom: 50px; }
   .nosotros .nosotros__imagen--1 {
     margin-top: 250px; }
   .nosotros .nosotros__1 {
