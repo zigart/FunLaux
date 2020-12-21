@@ -397,6 +397,9 @@ main {
     height: 90vh; }
   .carousel .carousel-item img {
     height: 90vh; }
+  .nosotros .nosotros__imagen {
+    margin-top: 0px;
+    margin-bottom: 50px; }
   .nosotros .nosotros__imagen--1 {
     margin-top: 250px; }
   .nosotros .nosotros__1 {
