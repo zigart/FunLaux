@@ -9,7 +9,7 @@
   margin: 0;
   padding: 0; }
 
-/***************************************************variables**********************************************************/
+/***************************************************variables y mixings **********************************************************/
 /***************************************Diseño general de todas las paginas********************************************/
 body {
   font-style: normal;
@@ -45,8 +45,7 @@ main {
 .nosotros__titulo {
   color: black;
   font-family: 'Roboto', sans-serif;
-  margin: 300px 0;
-  margin-bottom: 100px;
+  margin: 41vh 0;
   font-size: 40px;
   animation-name: titulo;
   animation-iteration-count: 1;
@@ -57,8 +56,7 @@ main {
 .servicios__titulo {
   color: black;
   font-family: 'Roboto', sans-serif;
-  margin: 300px 0;
-  margin-bottom: 100px;
+  margin: 41vh 0;
   font-size: 40px;
   animation-name: titulo;
   animation-iteration-count: 1;
@@ -69,8 +67,7 @@ main {
 .galeria__titulo {
   color: black;
   font-family: 'Roboto', sans-serif;
-  margin: 300px 0;
-  margin-bottom: 100px;
+  margin: 41vh 0;
   font-size: 40px;
   animation-name: titulo;
   animation-iteration-count: 1;
@@ -81,8 +78,7 @@ main {
 .contacto__titulo {
   color: black;
   font-family: 'Roboto', sans-serif;
-  margin: 300px 0;
-  margin-bottom: 100px;
+  margin: 41vh 0;
   font-size: 40px;
   animation-name: titulo;
   animation-iteration-count: 1;
@@ -121,7 +117,7 @@ main {
   background: #1f1f1f;
   border-radius: 10px; }
 
-/* Handle on hover */
+/* handle hover */
 ::-webkit-scrollbar-thumb:hover {
   background: gray; }
 
@@ -149,7 +145,7 @@ main {
   overflow: hidden; }
   .nosotros .nosotros__descripcion {
     text-align: center;
-    margin: 250px 0px;
+    margin: 120px 0px;
     margin-bottom: 50px;
     padding: 50px;
     font-size: 20px; }
@@ -160,17 +156,31 @@ main {
 .servicios {
   overflow: hidden; }
   .servicios .servicios__1 {
-    margin: 250px 0px;
     margin-bottom: 20px;
     padding: 10px; }
   .servicios .servicios__2 {
-    margin: 250px 0px;
     margin-bottom: 20px;
     padding: 10px; }
   .servicios .servicios__imagenes {
     width: 100%;
     height: auto;
-    border-radius: 80%; }
+    border-radius: 10%; }
+  .servicios .terminacion {
+    width: 100%;
+    min-height: 250px;
+    margin-bottom: 20px;
+    background-image: url("../imagenes/terminacion.jpg");
+    background-position: center;
+    background-size: cover; }
+    .servicios .terminacion h3 {
+      background-color: black;
+      color: white; }
+    .servicios .terminacion p {
+      min-height: 25px;
+      margin-top: 60px;
+      background-color: black;
+      color: white;
+      word-wrap: break-word; }
   .servicios .servicios__parrafos {
     margin: 80px 0; }
   .servicios table thead tr th {
@@ -424,7 +434,7 @@ main {
     margin-top: 250px;
     padding: 10px; }
   .nosotros .nosotros__2 {
-    margin: 250px 0px;
+    margin: 120px 0px;
     padding: 10px; }
   .contacto h1 {
     font-size: 40px; }
