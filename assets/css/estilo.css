@@ -107,6 +107,24 @@ main {
   100% {
     transform: scale(1.3); } }
 
+/***************************************************scrollbar****************************************************/
+::-webkit-scrollbar {
+  width: 8px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #1f1f1f;
+  border-radius: 10px; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1f1f1f;
+  border-radius: 10px; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: gray; }
+
 /********************************************Estilo del header***************************************************/
 .header {
   background-color: black;
