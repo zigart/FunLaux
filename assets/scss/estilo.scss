@@ -270,9 +270,11 @@ contacto {
     margin: 5px;
 }
 
-.galeria img {
-    width: 500px;
-    height: auto;
+.galeria {
+    img {
+        width: 500px;
+        height: auto;
+    }
 }
 
 
@@ -446,8 +448,10 @@ contacto {
             padding: 10px;
         }
     }
-    .galeria img {
-        width: 90vw;
+    .galeria {
+        img {
+            width: 90vw;
+        }
     }
     .imagen {
         @include margin(30%,
@@ -513,10 +517,6 @@ contacto {
             padding: 10px;
         }
     }
-    .galeria__imagenes {
-        height: 210px;
-        margin: 30px 0;
-    }
     .contacto {
         .contacto__formulario {
             margin-top: 40px;
@@ -564,6 +564,12 @@ contacto {
         .nosotros__2 {
             margin: 50px 0;
             padding: 10px;
+        }
+    }
+    .galeria {
+        img {
+            width: 300px;
+            height: auto;
         }
     }
     .servicios__imagenes {
@@ -616,6 +622,13 @@ contacto {
         .nosotros__2 {
             margin: $margin;
             padding: 10px;
+        }
+    }
+    .galeria {
+        img {
+            width: 450px;
+            min-height: 300px;
+            height: auto;
         }
     }
     .contacto {
