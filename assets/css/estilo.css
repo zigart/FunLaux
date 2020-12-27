@@ -172,7 +172,7 @@ main {
     background-image: url("../imagenes/terminacion.jpg");
     background-position: center;
     background-size: cover; }
-    .servicios .terminacion h3 {
+    .servicios .terminacion #terminaciones__subtitulo {
       background-color: black;
       color: white; }
     .servicios .terminacion p {
