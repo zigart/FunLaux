@@ -285,6 +285,7 @@ contacto {
 
 .modal {
     display: none;
+    margin: auto;
 }
 
 .modal:target {
@@ -309,8 +310,7 @@ contacto {
 }
 
 .imagen {
-    @include margin(15%,
-    0);
+    margin: auto;
     width: 100%;
     height: auto;
     display: flex;
