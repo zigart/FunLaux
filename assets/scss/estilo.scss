@@ -18,7 +18,7 @@ $bgcolor: white;
 $tituloColor:rgb(0, 0, 0);
 $subtituloColor:rgb(56, 56, 56);
 $margin: 120px 0px;
-$marginTop:250px;
+$marginTop:100px;
 @mixin size ($width, $height) {
     width: $width;
     height: $height;
@@ -577,6 +577,9 @@ contacto {
             margin: 50px 0;
             padding: 10px;
         }
+        .nosotros__funlaux {
+            width: 80%;
+        }
     }
     .galeria {
         img {
@@ -634,6 +637,9 @@ contacto {
         .nosotros__2 {
             margin: $margin;
             padding: 10px;
+        }
+        .nosotros__funlaux {
+            width: 60%;
         }
     }
     .galeria {

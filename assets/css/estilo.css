@@ -410,6 +410,8 @@ main {
   .nosotros .nosotros__2 {
     margin: 50px 0;
     padding: 10px; }
+  .nosotros .nosotros__funlaux {
+    width: 80%; }
   .galeria img {
     width: 300px;
     height: auto; }
@@ -437,13 +439,15 @@ main {
     margin-top: 0px;
     margin-bottom: 50px; }
   .nosotros .nosotros__imagen--1 {
-    margin-top: 250px; }
+    margin-top: 100px; }
   .nosotros .nosotros__1 {
-    margin-top: 250px;
+    margin-top: 100px;
     padding: 10px; }
   .nosotros .nosotros__2 {
     margin: 120px 0px;
     padding: 10px; }
+  .nosotros .nosotros__funlaux {
+    width: 60%; }
   .galeria img {
     width: 450px;
     min-height: 300px;
