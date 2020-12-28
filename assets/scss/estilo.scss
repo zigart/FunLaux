@@ -178,14 +178,13 @@ contacto {
     overflow: hidden;
     .nosotros__descripcion {
         text-align: center;
-        margin: $margin;
-        margin-bottom: 50px;
+        margin: auto;
         padding: 50px;
         font-size: 20px;
     }
     .nosotros__funlaux {
-        width: 70%;
         height: auto;
+        margin: auto;
     }
     .nosotros__imagen {
         border-radius: 40px;
@@ -451,6 +450,10 @@ contacto {
             margin: 50px 0;
             padding: 10px;
         }
+        .nosotros__funlaux {
+            width: 100%;
+            margin: auto;
+        }
     }
     .galeria {
         img {
@@ -519,6 +522,11 @@ contacto {
         .nosotros__2 {
             margin: 50px 0;
             padding: 10px;
+        }
+        .nosotros__funlaux {
+            width: 100%;
+            height: auto;
+            margin: auto;
         }
     }
     .contacto {

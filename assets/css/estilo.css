@@ -145,13 +145,12 @@ main {
   overflow: hidden; }
   .nosotros .nosotros__descripcion {
     text-align: center;
-    margin: 120px 0px;
-    margin-bottom: 50px;
+    margin: auto;
     padding: 50px;
     font-size: 20px; }
   .nosotros .nosotros__funlaux {
-    width: 70%;
-    height: auto; }
+    height: auto;
+    margin: auto; }
   .nosotros .nosotros__imagen {
     border-radius: 40px; }
 
@@ -332,6 +331,9 @@ main {
   .nosotros .nosotros__2 {
     margin: 50px 0;
     padding: 10px; }
+  .nosotros .nosotros__funlaux {
+    width: 100%;
+    margin: auto; }
   .galeria img {
     width: 90vw; }
   .imagen {
@@ -376,6 +378,10 @@ main {
   .nosotros .nosotros__2 {
     margin: 50px 0;
     padding: 10px; }
+  .nosotros .nosotros__funlaux {
+    width: 100%;
+    height: auto;
+    margin: auto; }
   .contacto .contacto__formulario {
     margin-top: 40px; }
   .contacto .contacto__fondo--mapa {
