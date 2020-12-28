@@ -149,6 +149,9 @@ main {
     margin-bottom: 50px;
     padding: 50px;
     font-size: 20px; }
+  .nosotros .nosotros__funlaux {
+    width: 70%;
+    height: auto; }
   .nosotros .nosotros__imagen {
     border-radius: 40px; }
 
