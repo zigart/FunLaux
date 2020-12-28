@@ -460,9 +460,8 @@ contacto {
             width: 90vw;
         }
     }
+    //arreglar
     .imagen {
-        @include margin(30%,
-        0);
         transform: scale(1);
         text-decoration: none;
     }

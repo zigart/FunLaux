@@ -337,7 +337,6 @@ main {
   .galeria img {
     width: 90vw; }
   .imagen {
-    margin: 30% 0;
     transform: scale(1);
     text-decoration: none; }
   .contacto {
