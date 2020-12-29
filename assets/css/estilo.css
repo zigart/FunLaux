@@ -191,10 +191,7 @@ main {
     color: #b8b8b8; }
 
 /*********************************************Diseño de galeria**********************************************/
-.galeria__titulo {
-  margin-bottom: 0; }
-
-.galeria {
+.galeria__imagenes {
   overflow: hidden;
   width: 100%;
   list-style: none;
@@ -207,76 +204,12 @@ main {
   flex-wrap: wrap;
   justify-content: space-around; }
 
-.galeria li {
-  margin: 5px; }
-
-.galeria img {
-  width: 500px;
-  height: auto; }
-
-/*Estilos del modal*/
-.modal {
-  display: none;
-  margin: auto; }
-
-.modal:target {
-  display: block;
-  position: fixed;
-  background: rgba(0, 0, 0, 0.8);
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; }
-
-.modal h3 {
-  color: #fff;
-  font-size: 30px;
-  text-align: center;
-  margin: 15px 0; }
-
-.modal a {
-  text-decoration: none; }
-
-.imagen {
-  margin: auto;
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-.imagen a {
-  color: #fff;
-  font-size: 40px;
-  text-decoration: none;
-  margin: 0 10px; }
-
-.imagen a:nth-child(2) {
-  margin: 0;
-  height: 100%;
-  flex-shrink: 2; }
-
-.imagen img {
+.galeria__imagenes img {
   width: 500px;
   height: 100%;
   max-width: 100%;
   border: 5px solid #fff;
   box-sizing: border-box; }
-
-.cerrar {
-  display: block;
-  float: right;
-  margin: 1% 1%;
-  background: #fff;
-  width: 30px;
-  height: 30px;
-  text-align: end;
-  text-decoration: none;
-  font-size: 25px;
-  color: black;
-  padding: 5px;
-  border-radius: 50%;
-  line-height: 22px; }
 
 /********************************************Diseño de contacto*********************************************/
 .contacto {
@@ -335,11 +268,8 @@ main {
   .nosotros .nosotros__funlaux {
     width: 100%;
     margin: auto; }
-  .galeria img {
+  .galeria__imagenes img {
     width: 90vw; }
-  .imagen {
-    transform: scale(1);
-    text-decoration: none; }
   .contacto {
     padding: 20px; }
     .contacto section {
@@ -412,7 +342,7 @@ main {
     padding: 10px; }
   .nosotros .nosotros__funlaux {
     width: 80%; }
-  .galeria img {
+  .galeria__imagenes img {
     width: 300px;
     height: auto; }
   .servicios__imagenes {
@@ -448,7 +378,7 @@ main {
     padding: 10px; }
   .nosotros .nosotros__funlaux {
     width: 60%; }
-  .galeria img {
+  .galeria__imagenes img {
     width: 450px;
     min-height: 300px;
     height: auto; }
