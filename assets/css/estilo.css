@@ -226,11 +226,11 @@ main {
     height: 70%; }
   .contacto .form-group button {
     margin: 0 20px; }
-  .contacto section {
+  .contacto article {
     margin-bottom: 150px; }
-    .contacto section div p {
+    .contacto article div p {
       color: white; }
-    .contacto section div label {
+    .contacto article div label {
       color: white; }
 
 /******************************************Diseño del footer****************************************************/
