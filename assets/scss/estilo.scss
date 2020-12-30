@@ -308,6 +308,11 @@
             .footer__sobresvg {
                 @extend .footer__placeholdersvg
             }
+            .footer__ubicacion {
+                p {
+                    word-break: normal;
+                }
+            }
             .footer__parrafo {
                 word-break: break-all;
             }

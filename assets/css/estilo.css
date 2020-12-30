@@ -247,6 +247,8 @@ main {
   .footer .footer__placeholdersvg, .footer .footer__telefonosvg, .footer .footer__sobresvg {
     width: 30px;
     height: 30px; }
+  .footer .footer__ubicacion p {
+    word-break: normal; }
   .footer .footer__parrafo {
     word-break: break-all; }
   .footer .footer__email {
