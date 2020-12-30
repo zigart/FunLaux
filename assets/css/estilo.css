@@ -3,7 +3,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  word-wrap: break-word; }
 
 .container-fluid {
   margin: 0;
@@ -213,13 +214,13 @@ main {
 
 /********************************************Diseño de contacto*********************************************/
 .contacto {
-  overflow: hidden;
   background: #adadad;
   background: linear-gradient(0deg, #adadad 0%, white 50%, #adadad 100%); }
   .contacto .contacto__fondo {
     padding: 10px;
     width: 80%;
     background-color: rgba(0, 0, 0, 0.39);
+    border-radius: 20px;
     margin-bottom: 20px; }
   .contacto .contacto__mapa {
     width: 90%;
@@ -229,9 +230,12 @@ main {
   .contacto article {
     margin-bottom: 150px; }
     .contacto article div p {
-      color: white; }
+      color: white;
+      margin: auto; }
     .contacto article div label {
       color: white; }
+  .contacto .contacto__fondo--email p {
+    word-wrap: break-word; }
 
 /******************************************Diseño del footer****************************************************/
 .footer {
@@ -243,6 +247,8 @@ main {
   .footer .footer__placeholdersvg, .footer .footer__telefonosvg, .footer .footer__sobresvg {
     width: 30px;
     height: 30px; }
+  .footer .footer__parrafo {
+    word-break: break-all; }
   .footer .footer__email {
     margin: auto; }
   .footer .footer__parrafo--numeros {
@@ -288,7 +294,9 @@ main {
     .contacto .contacto__fondo--mapa {
       height: 500px;
       margin: 20px 0; }
-  .footer__parrafo {
+    .contacto article {
+      margin-bottom: 80px; }
+  .footer .footer__parrafo {
     margin: auto 0px;
     align-items: center; } }
 
@@ -382,8 +390,6 @@ main {
     width: 450px;
     min-height: 300px;
     height: auto; }
-  .contacto h1 {
-    font-size: 40px; }
   .imagen {
     margin: 15% 0;
     transform: scale(1.5); }
