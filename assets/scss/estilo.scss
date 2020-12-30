@@ -1,576 +1,683 @@
-        /*Medidas default*/
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+/*Medidas default*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+
+/***************************************************variables y mixings **********************************************************/
+
+$bgcolor: white;
+$tituloColor:rgb(0, 0, 0);
+$subtituloColor:rgb(56, 56, 56);
+$margin: 120px 0px;
+$marginTop:100px;
+@mixin size ($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin margin ($topBot, $leftRight) {
+    margin: $topBot $leftRight;
+}
+
+
+/***************************************Diseño general de todas las paginas********************************************/
+
+body {
+    font-style: normal;
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 2px;
+    background-color: white;
+}
+
+.subtitulos {
+    color: subtituloColor;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+main {
+    min-height: 80vh;
+    background-color: $bgcolor;
+    @if $bgcolor==black {
+        color: white;
+    }
+    @else {
+        color: black;
+    }
+}
+
+@each $subtitle in trayectoria,
+servicios,
+contacto {
+    .#{$subtitle}__subtitulo {
+        color: $subtituloColor;
+        @include margin(30px, 0);
+        font-size: 30px;
+    }
+}
+
+@each $title in nosotros,
+servicios,
+galeria,
+contacto {
+    .#{$title}__titulo {
+        color: $tituloColor;
+        font-family: 'Roboto', sans-serif;
+        @include margin(41vh, 0);
+        font-size: 40px;
+        animation-name: titulo;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in-out;
+        animation-duration: 1s;
+        animation-delay: 0s;
+    }
+}
+
+
+/*********************************************Animaciones********************************************************/
+
+@keyframes titulo {
+    0% {
+        transform: translateY(-100px);
+    }
+    25% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes ampliar {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.3);
+    }
+}
+
+
+/***************************************************scrollbar****************************************************/
+
+ ::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(31, 31, 31);
+    border-radius: 10px;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: rgb(31, 31, 31);
+    border-radius: 10px;
+}
+
+
+/* handle hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: gray;
+}
+
+
+/********************************************Estilo del header***************************************************/
+
+.header {
+    background-color: rgb(0, 0, 0);
+    border-bottom: 8px double rgb(255, 255, 255);
+    nav {
+        .navegacion__logo {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2rem;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
+        ul {
+            li {
+                margin: 0 10px;
+            }
+        }
+    }
+}
+
+
+/***********************************************Diseño de inicio**********************************************/
+
+.inicio {
+    background: rgb(173, 173, 173);
+    background: linear-gradient(0deg, rgba(173, 173, 173, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(173, 173, 173, 1) 100%);
+    #h1Inicio {
+        visibility: hidden;
+    }
+}
+
+
+/*********************************************Diseño de Nosotros******************************************/
+
+.nosotros {
+    overflow: hidden;
+    .nosotros__descripcion {
+        text-align: center;
+        margin: auto;
+        padding: 50px;
+        font-size: 20px;
+    }
+    .nosotros__funlaux {
+        height: auto;
+        margin: auto;
+    }
+    .nosotros__imagen {
+        border-radius: 40px;
+    }
+}
+
+
+/******************************************************Diseño servicios*************************************************/
+
+.servicios {
+    overflow: hidden;
+    @for $a from 1 through 2 {
+        .servicios__#{$a} {
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+    }
+    .servicios__imagenes {
+        width: 100%;
+        height: auto;
+        border-radius: 10%;
+    }
+    .terminacion {
+        width: 100%;
+        min-height: 250px;
+        margin-bottom: 20px;
+        background-image: url('../imagenes/terminacion.jpg');
+        background-position: center;
+        background-size: cover;
+        #terminaciones__subtitulo {
+            background-color: black;
+            color: white;
+        }
+        p {
+            min-height: 25px;
+            margin-top: 60px;
+            background-color: black;
+            color: white;
             word-wrap: break-word;
         }
-        
-        .container-fluid {
-            margin: 0;
-            padding: 0;
+    }
+    .servicios__parrafos {
+        @include margin(80px,
+        0);
+    }
+    table {
+        thead {
+            tr {
+                th {
+                    color: rgb(255, 254, 254);
+                }
+            }
         }
-        /***************************************************variables y mixings **********************************************************/
-        
-        $bgcolor: white;
-        $tituloColor:rgb(0, 0, 0);
-        $subtituloColor:rgb(56, 56, 56);
-        $margin: 120px 0px;
-        $marginTop:100px;
-        @mixin size ($width, $height) {
-            width: $width;
-            height: $height;
+        tbody {
+            tr {
+                td {
+                    color: rgb(184, 184, 184);
+                }
+            }
         }
-        
-        @mixin margin ($topBot, $leftRight) {
-            margin: $topBot $leftRight;
+    }
+}
+
+
+/*********************************************Diseño de galeria**********************************************/
+
+.galeria__imagenes {
+    overflow: hidden;
+    width: 100%;
+    list-style: none;
+    margin: auto;
+    margin-top: 24%;
+    margin-bottom: 150px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.galeria__imagenes {
+    img {
+        width: 500px;
+        height: 100%;
+        max-width: 100%;
+        border: 5px solid #fff;
+        box-sizing: border-box;
+    }
+}
+
+
+/********************************************Diseño de contacto*********************************************/
+
+.contacto {
+    background: rgb(173, 173, 173);
+    background: linear-gradient(0deg, rgba(173, 173, 173, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(173, 173, 173, 1) 100%);
+    .contacto__fondo {
+        padding: 10px;
+        width: 80%;
+        background-color: rgba(0, 0, 0, 0.39);
+        border-radius: 20px;
+        margin-bottom: 20px;
+    }
+    .contacto__mapa {
+        @include size(90%,
+        70%);
+    }
+    .form-group {
+        button {
+            margin: 0 20px;
         }
-        /***************************************Diseño general de todas las paginas********************************************/
-        
-        body {
-            font-style: normal;
-            font-family: 'Quicksand', sans-serif;
-            letter-spacing: 2px;
-            background-color: white;
-        }
-        
-        .subtitulos {
-            color: subtituloColor;
-            font-family: 'Roboto', sans-serif;
-            text-align: center;
-        }
-        
-        main {
-            min-height: 80vh;
-            background-color: $bgcolor;
-            @if $bgcolor==black {
+    }
+    article {
+        margin-bottom: 150px;
+        div {
+            p {
+                color: white;
+                margin: auto;
+            }
+            label {
                 color: white;
             }
-            @else {
-                color: black;
-            }
         }
-        
-        @each $subtitle in trayectoria,
-        servicios,
-        contacto {
-            .#{$subtitle}__subtitulo {
-                color: $subtituloColor;
-                @include margin(30px, 0);
-                font-size: 30px;
-            }
+    }
+    .contacto__fondo--email {
+        p {
+            word-wrap: break-word;
         }
-        
-        @each $title in nosotros,
-        servicios,
-        galeria,
-        contacto {
-            .#{$title}__titulo {
-                color: $tituloColor;
-                font-family: 'Roboto', sans-serif;
-                @include margin(41vh, 0);
-                font-size: 40px;
-                animation-name: titulo;
-                animation-iteration-count: 1;
-                animation-timing-function: ease-in-out;
-                animation-duration: 1s;
-                animation-delay: 0s;
-            }
+    }
+}
+
+
+/******************************************Diseño del footer****************************************************/
+
+.footer {
+    position: relative;
+    background-color: black;
+    border-top: 8px double white;
+    color: rgb(156, 156, 156);
+    bottom: 0;
+    .footer__placeholdersvg {
+        @include size(30px,
+        30px);
+    }
+    .footer__telefonosvg {
+        @extend .footer__placeholdersvg;
+    }
+    .footer__sobresvg {
+        @extend .footer__placeholdersvg
+    }
+    .footer__ubicacion {
+        p {
+            word-break: normal;
         }
-        /*********************************************Animaciones********************************************************/
-        
-        @keyframes titulo {
-            0% {
-                transform: translateY(-100px);
-            }
-            25% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-20px);
-            }
-            100% {
-                transform: translateY(0);
-            }
+    }
+    .footer__parrafo {
+        word-break: break-all;
+    }
+    .footer__email {
+        margin: auto;
+    }
+    .footer__parrafo--numeros {
+        height: 60px;
+    }
+}
+
+
+/* adaptaciones del responsive */
+
+
+/*xs*/
+
+@media (max-width:575px) {
+    .bordeCarrusel {
+        border: 3px double rgb(156, 156, 156);
+    }
+    .carousel {
+        .carousel-item {
+            height: 60vh;
+            background-size: 100% 100%;
         }
-        
-        @keyframes ampliar {
-            0% {
-                transform: scale(1);
-            }
-            100% {
-                transform: scale(1.3);
-            }
-        }
-        /***************************************************scrollbar****************************************************/
-        
-         ::-webkit-scrollbar {
-            width: 8px;
-        }
-        /* Track */
-        
-         ::-webkit-scrollbar-track {
-            box-shadow: inset 0 0 5px rgb(31, 31, 31);
-            border-radius: 10px;
-        }
-        /* Handle */
-        
-         ::-webkit-scrollbar-thumb {
-            background: rgb(31, 31, 31);
-            border-radius: 10px;
-        }
-        /* handle hover */
-        
-         ::-webkit-scrollbar-thumb:hover {
-            background: gray;
-        }
-        /********************************************Estilo del header***************************************************/
-        
-        .header {
-            background-color: rgb(0, 0, 0);
-            border-bottom: 8px double rgb(255, 255, 255);
-            nav {
-                .navegacion__logo {
-                    font-family: 'Great Vibes', cursive;
-                    font-size: 2rem;
-                    text-decoration: none;
-                    color: rgb(255, 255, 255);
-                }
-                ul {
-                    li {
-                        margin: 0 10px;
-                    }
-                }
-            }
-        }
-        /***********************************************Diseño de inicio**********************************************/
-        
-        .inicio {
-            background: rgb(173, 173, 173);
-            background: linear-gradient(0deg, rgba(173, 173, 173, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(173, 173, 173, 1) 100%);
-            #h1Inicio {
-                visibility: hidden;
-            }
-        }
-        /*********************************************Diseño de Nosotros******************************************/
-        
-        .nosotros {
-            overflow: hidden;
-            .nosotros__descripcion {
-                text-align: center;
-                margin: auto;
-                padding: 50px;
-                font-size: 20px;
-            }
-            .nosotros__funlaux {
-                height: auto;
-                margin: auto;
-            }
-            .nosotros__imagen {
-                border-radius: 40px;
-            }
-        }
-        /******************************************************Diseño servicios*************************************************/
-        
-        .servicios {
-            overflow: hidden;
-            @for $a from 1 through 2 {
-                .servicios__#{$a} {
-                    margin-bottom: 20px;
-                    padding: 10px;
-                }
-            }
-            .servicios__imagenes {
-                width: 100%;
-                height: auto;
-                border-radius: 10%;
-            }
-            .terminacion {
-                width: 100%;
-                min-height: 250px;
-                margin-bottom: 20px;
-                background-image: url('../imagenes/terminacion.jpg');
-                background-position: center;
-                background-size: cover;
-                #terminaciones__subtitulo {
-                    background-color: black;
-                    color: white;
-                }
-                p {
-                    min-height: 25px;
-                    margin-top: 60px;
-                    background-color: black;
-                    color: white;
-                    word-wrap: break-word;
-                }
-            }
-            .servicios__parrafos {
-                @include margin(80px,
-                0);
-            }
-            table {
-                thead {
-                    tr {
-                        th {
-                            color: rgb(255, 254, 254);
-                        }
-                    }
-                }
-                tbody {
-                    tr {
-                        td {
-                            color: rgb(184, 184, 184);
-                        }
-                    }
-                }
-            }
-        }
-        /*********************************************Diseño de galeria**********************************************/
-        
-        .galeria__imagenes {
-            overflow: hidden;
+        .foto1 {
             width: 100%;
-            list-style: none;
+            height: 100%;
+            background-image: url(../imagenes/funlaux-xs-s.jpg);
+            background-size: 100% 100%;
+        }
+        .foto2 {
+            width: 100%;
+            height: 100%;
+            background-image: url(../imagenes/Fundiciondealuminio-xs-s.jpg);
+            background-size: 100% 100%;
+        }
+        .foto3 {
+            width: 100%;
+            height: 100%;
+            background-image: url(../imagenes/calidadycompromiso-xs-s.jpg);
+            background-size: 100% 100%;
+        }
+        .carousel-item img {
+            height: 60vh;
+        }
+    }
+    .nosotros {
+        .nosotros__imagen {
+            margin-top: 50px;
+        }
+        .nosotros__1 {
+            margin: 50px 0px;
+            padding: 10px;
+        }
+        .nosotros__2 {
+            margin: 50px 0;
+            padding: 10px;
+        }
+        .nosotros__funlaux {
+            width: 100%;
             margin: auto;
-            margin-top: 24%;
-            margin-bottom: 150px;
-            padding: 20px;
-            box-sizing: border-box;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
         }
-        
-        .galeria__imagenes {
-            img {
-                width: 500px;
-                height: 100%;
-                max-width: 100%;
-                border: 5px solid #fff;
-                box-sizing: border-box;
-            }
+    }
+    .galeria__imagenes {
+        img {
+            width: 90vw;
         }
-        /********************************************Diseño de contacto*********************************************/
-        
-        .contacto {
-            background: rgb(173, 173, 173);
-            background: linear-gradient(0deg, rgba(173, 173, 173, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(173, 173, 173, 1) 100%);
-            .contacto__fondo {
-                padding: 10px;
-                width: 80%;
-                background-color: rgba(0, 0, 0, 0.39);
-                border-radius: 20px;
-                margin-bottom: 20px;
-            }
-            .contacto__mapa {
-                @include size(90%,
-                70%);
-            }
-            .form-group {
-                button {
-                    margin: 0 20px;
-                }
-            }
-            article {
-                margin-bottom: 150px;
-                div {
-                    p {
-                        color: white;
-                        margin: auto;
-                    }
-                    label {
-                        color: white;
-                    }
-                }
-            }
-            .contacto__fondo--email {
-                p {
-                    word-wrap: break-word;
-                }
-            }
+    }
+    .contacto {
+        padding: 20px;
+        section {
+            margin-bottom: 50px;
+            padding: 5px;
         }
-        /******************************************Diseño del footer****************************************************/
-        
-        .footer {
-            position: relative;
-            background-color: black;
-            border-top: 8px double white;
-            color: rgb(156, 156, 156);
-            bottom: 0;
-            .footer__placeholdersvg {
-                @include size(30px,
-                30px);
-            }
-            .footer__telefonosvg {
-                @extend .footer__placeholdersvg;
-            }
-            .footer__sobresvg {
-                @extend .footer__placeholdersvg
-            }
-            .footer__ubicacion {
-                p {
-                    word-break: normal;
-                }
-            }
-            .footer__parrafo {
-                word-break: break-all;
-            }
-            .footer__email {
-                margin: auto;
-            }
-            .footer__parrafo--numeros {
-                height: 60px;
-            }
+        h1 {
+            font-size: 30px;
         }
-        /* adaptaciones del responsive */
-        /*xs*/
-        
-        @media (max-width:575px) {
-            .bordeCarrusel {
-                border: 3px double rgb(156, 156, 156);
-            }
-            .carousel {
-                .carousel-item {
-                    height: 60vh;
-                }
-                .carousel-item img {
-                    height: 60vh;
-                }
-            }
-            .nosotros {
-                .nosotros__imagen {
-                    margin-top: 50px;
-                }
-                .nosotros__1 {
-                    margin: 50px 0px;
-                    padding: 10px;
-                }
-                .nosotros__2 {
-                    margin: 50px 0;
-                    padding: 10px;
-                }
-                .nosotros__funlaux {
-                    width: 100%;
-                    margin: auto;
-                }
-            }
-            .galeria__imagenes {
-                img {
-                    width: 90vw;
-                }
-            }
-            .contacto {
-                padding: 20px;
-                section {
-                    margin-bottom: 50px;
-                    padding: 5px;
-                }
-                h1 {
-                    font-size: 30px;
-                }
-                .contacto__fondo {
-                    border: none;
-                    padding: 5px;
-                    width: 100%;
-                    margin-bottom: 5px;
-                }
-                .contacto__mapa {
-                    @include size(95%,
-                    70%);
-                }
-                .contacto__fondo--mapa {
-                    height: 500px;
-                    margin: 20px 0;
-                }
-                article {
-                    margin-bottom: 80px;
-                }
-            }
-            .footer {
-                .footer__parrafo {
-                    margin: auto 0px;
-                    align-items: center;
-                }
-            }
+        .contacto__fondo {
+            border: none;
+            padding: 5px;
+            width: 100%;
+            margin-bottom: 5px;
         }
-        /*sm*/
-        
-        @media (min-width:576px) {
-            .bordeCarrusel {
-                border: 3px double rgb(156, 156, 156);
-            }
-            .carousel {
-                .carousel-item {
-                    height: 70vh;
-                }
-                .carousel-item img {
-                    height: 70vh;
-                }
-            }
-            .nosotros {
-                .nosotros__imagen {
-                    margin-top: 50px;
-                }
-                .nosotros__1 {
-                    margin: 50px 0px;
-                    padding: 10px;
-                }
-                .nosotros__2 {
-                    margin: 50px 0;
-                    padding: 10px;
-                }
-                .nosotros__funlaux {
-                    width: 100%;
-                    height: auto;
-                    margin: auto;
-                }
-            }
-            .contacto {
-                .contacto__formulario {
-                    margin-top: 40px;
-                }
-                .contacto__fondo--mapa {
-                    height: 500px;
-                    margin: 20px 0;
-                }
-            }
-            .footer__parrafo {
-                margin: 0 1px;
-            }
-            .imagen {
-                @include margin(25%,
-                0);
-            }
-            .footer__parrafo {
-                margin: auto 10px;
-            }
+        .contacto__mapa {
+            @include size(95%,
+            70%);
         }
-        /*md*/
-        
-        @media (min-width:768px) {
-            .bordeCarrusel {
-                border: 3px double rgb(156, 156, 156);
-            }
-            .carousel {
-                .carousel-item {
-                    height: 90vh;
-                }
-                .carousel-item img {
-                    height: 90vh;
-                }
-            }
-            .nosotros {
-                .nosotros__imagen {
-                    margin-top: 50px;
-                }
-                .nosotros__1 {
-                    margin: 50px 0px;
-                    padding: 10px;
-                }
-                .nosotros__2 {
-                    margin: 50px 0;
-                    padding: 10px;
-                }
-                .nosotros__funlaux {
-                    width: 80%;
-                }
-            }
-            .galeria__imagenes {
-                img {
-                    width: 300px;
-                    height: auto;
-                }
-            }
-            .servicios__imagenes {
-                width: 100%;
-            }
-            .contacto {
-                .contacto__formulario {
-                    margin-top: 40px;
-                }
-                .contacto__fondo--mapa {
-                    height: 600px;
-                    margin: 20px 0;
-                }
-            }
-            .footer__parrafo {
-                margin: auto 10px;
-            }
-            .imagen {
-                @include margin(20%,
-                0);
-                transform: scale(1.3);
+        .contacto__fondo--mapa {
+            height: 500px;
+            margin: 20px 0;
+        }
+        article {
+            margin-bottom: 80px;
+        }
+    }
+    .footer {
+        .footer__parrafo {
+            margin: auto 0px;
+            align-items: center;
+        }
+    }
+}
+
+
+/*sm*/
+
+@media (min-width:576px) {
+    .bordeCarrusel {
+        border: 3px double rgb(156, 156, 156);
+    }
+    .carousel {
+        .carousel-item {
+            height: 70vh;
+            background-size: 100% 100%;
+        }
+        .foto1 {
+            width: 100%;
+            height: 100%;
+            background-image: url(../imagenes/funlaux-xs-s.jpg);
+            background-size: 100% 100%;
+        }
+        .foto2 {
+            width: 100%;
+            height: 100%;
+            background-image: url(../imagenes/Fundiciondealuminio-xs-s.jpg);
+            background-size: 100% 100%;
+        }
+        .foto3 {
+            width: 100%;
+            height: 100%;
+            background-image: url(../imagenes/calidadycompromiso-xs-s.jpg);
+            background-size: 100% 100%;
+        }
+    }
+    .nosotros {
+        .nosotros__imagen {
+            margin-top: 50px;
+        }
+        .nosotros__1 {
+            margin: 50px 0px;
+            padding: 10px;
+        }
+        .nosotros__2 {
+            margin: 50px 0;
+            padding: 10px;
+        }
+        .nosotros__funlaux {
+            width: 100%;
+            height: auto;
+            margin: auto;
+        }
+    }
+    .contacto {
+        .contacto__formulario {
+            margin-top: 40px;
+        }
+        .contacto__fondo--mapa {
+            height: 500px;
+            margin: 20px 0;
+        }
+    }
+    .footer__parrafo {
+        margin: 0 1px;
+    }
+    .imagen {
+        @include margin(25%,
+        0);
+    }
+    .footer__parrafo {
+        margin: auto 10px;
+    }
+}
+
+
+/*md*/
+
+@media (min-width:768px) {
+    .bordeCarrusel {
+        border: 3px double rgb(156, 156, 156);
+    }
+    .carousel {
+        .carousel-item {
+            height: 90vh;
+        }
+    }
+    .foto1 {
+        width: 100%;
+        height: 100%;
+        background-image: url(../imagenes/funlaux-medium.jpg);
+        background-size: 100% 100%;
+    }
+    .foto2 {
+        width: 100%;
+        height: 100%;
+        background-image: url(../imagenes/Fundiciondealuminio-medium.jpg);
+        background-size: 100% 100%;
+    }
+    .foto3 {
+        width: 100%;
+        height: 100%;
+        background-image: url(../imagenes/calidadycompromiso-medium.jpg);
+        background-size: 100% 100%;
+    }
+}
+
+.nosotros {
+    .nosotros__imagen {
+        margin-top: 50px;
+    }
+    .nosotros__1 {
+        margin: 50px 0px;
+        padding: 10px;
+    }
+    .nosotros__2 {
+        margin: 50px 0;
+        padding: 10px;
+    }
+    .nosotros__funlaux {
+        width: 80%;
+    }
+}
+
+.galeria__imagenes {
+    img {
+        width: 300px;
+        height: auto;
+    }
+}
+
+.servicios__imagenes {
+    width: 100%;
+}
+
+.contacto {
+    .contacto__formulario {
+        margin-top: 40px;
+    }
+    .contacto__fondo--mapa {
+        height: 600px;
+        margin: 20px 0;
+    }
+}
+
+.footer__parrafo {
+    margin: auto 10px;
+}
+
+.imagen {
+    @include margin(20%,
+    0);
+    transform: scale(1.3);
+}
+
+// Desktop
+@media (min-width:992px) {
+    .bordeCarrusel {
+        border: none;
+    }
+    .carousel {
+        .carousel-item {
+            height: 90vh;
+        }
+        .foto1 {
+            width: 100%;
+            height: 100%;
+            background-image: url(../imagenes/funlaux.jpg);
+            background-size: 100% 100%;
+        }
+        .foto2 {
+            width: 100%;
+            height: 100%;
+            background-image: url(../imagenes/Fundiciondealuminio.jpg);
+            background-size: 100% 100%;
+        }
+        .foto3 {
+            width: 100%;
+            height: 100%;
+            background-image: url(../imagenes/calidadycompromiso.jpg);
+            background-size: 100% 100%;
+        }
+    }
+    .nosotros {
+        .nosotros__imagen {
+            margin-top: 0px;
+            margin-bottom: 50px;
+        }
+        .nosotros__imagen--1 {
+            margin-top: $marginTop;
+        }
+        .nosotros__1 {
+            margin-top: $marginTop;
+            padding: 10px;
+        }
+        .nosotros__2 {
+            margin: $margin;
+            padding: 10px;
+        }
+        .nosotros__funlaux {
+            width: 60%;
+        }
+    }
+    .galeria__imagenes {
+        img {
+            width: 450px;
+            min-height: 300px;
+            height: auto;
+        }
+    }
+    .imagen {
+        @include margin(15%,
+        0);
+        transform: scale(1.5);
+    }
+    .contacto {
+        .contacto__fondo {
+            height: 100%;
+            margin-top: 0;
+        }
+        .form-group {
+            button {
+                margin-top: 20px;
             }
         }
-        
-        // Desktop
-        @media (min-width:992px) {
-            .bordeCarrusel {
-                border: none;
-            }
-            .carousel {
-                .carousel-item {
-                    height: 90vh;
-                }
-                .carousel-item img {
-                    height: 90vh;
-                }
-            }
-            .nosotros {
-                .nosotros__imagen {
-                    margin-top: 0px;
-                    margin-bottom: 50px;
-                }
-                .nosotros__imagen--1 {
-                    margin-top: $marginTop;
-                }
-                .nosotros__1 {
-                    margin-top: $marginTop;
-                    padding: 10px;
-                }
-                .nosotros__2 {
-                    margin: $margin;
-                    padding: 10px;
-                }
-                .nosotros__funlaux {
-                    width: 60%;
-                }
-            }
-            .galeria__imagenes {
-                img {
-                    width: 450px;
-                    min-height: 300px;
-                    height: auto;
-                }
-            }
-            .imagen {
-                @include margin(15%,
-                0);
-                transform: scale(1.5);
-            }
-            .contacto {
-                .contacto__fondo {
-                    height: 100%;
-                    margin-top: 0;
-                }
-                .form-group {
-                    button {
-                        margin-top: 20px;
-                    }
-                }
-                .contacto__fondo--telefono {
-                    p {
-                        margin-top: 4%;
-                    }
-                }
-                .contacto__fondo--email {
-                    p {
-                        margin-top: 7%;
-                    }
-                }
-            }
-            .footer__parrafo {
-                margin: auto 10px;
+        .contacto__fondo--telefono {
+            p {
+                margin-top: 4%;
             }
         }
+        .contacto__fondo--email {
+            p {
+                margin-top: 7%;
+            }
+        }
+    }
+    .footer__parrafo {
+        margin: auto 10px;
+    }
+}
