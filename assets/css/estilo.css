@@ -398,5 +398,9 @@ main {
     margin-top: 0; }
   .contacto .form-group button {
     margin-top: 20px; }
+  .contacto .contacto__fondo--telefono p {
+    margin-top: 4%; }
+  .contacto .contacto__fondo--email p {
+    margin-top: 7%; }
   .footer__parrafo {
     margin: auto 10px; } }
