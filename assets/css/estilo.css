@@ -234,8 +234,13 @@ main {
       margin: auto; }
     .contacto article div label {
       color: white; }
-  .contacto .contacto__fondo--email p {
-    word-wrap: break-word; }
+  .contacto .contacto__fondo--telefono p {
+    margin-top: 5px; }
+  .contacto .contacto__fondo--email {
+    height: 200px; }
+    .contacto .contacto__fondo--email p {
+      word-wrap: break-word;
+      margin-top: 15px; }
 
 /******************************************Diseño del footer****************************************************/
 .footer {
@@ -312,6 +317,10 @@ main {
     .contacto .contacto__fondo--mapa {
       height: 500px;
       margin: 20px 0; }
+    .contacto .contacto__fondo--telefono {
+      height: 120px; }
+    .contacto .contacto__fondo--email {
+      height: 100px; }
     .contacto article {
       margin-bottom: 80px; }
   .footer .footer__parrafo {
@@ -357,11 +366,15 @@ main {
   .contacto .contacto__fondo--mapa {
     height: 500px;
     margin: 20px 0; }
-  .footer__parrafo {
+  .contacto .contacto__fondo--telefono {
+    height: 120px; }
+  .contacto .contacto__fondo--email {
+    height: 100px; }
+  .contacto .footer__parrafo {
     margin: 0 1px; }
-  .imagen {
+  .contacto .imagen {
     margin: 25% 0; }
-  .footer__parrafo {
+  .contacto .footer__parrafo {
     margin: auto 10px; } }
 
 /*md*/
@@ -413,6 +426,12 @@ main {
 .contacto .contacto__fondo--mapa {
   height: 600px;
   margin: 20px 0; }
+
+.contacto .contacto__fondo--telefono {
+  height: 120px; }
+
+.contacto .contacto__fondo--email {
+  height: 120px; }
 
 .footer__parrafo {
   margin: auto 10px; }
@@ -466,9 +485,13 @@ main {
     margin-top: 0; }
   .contacto .form-group button {
     margin-top: 20px; }
-  .contacto .contacto__fondo--telefono p {
-    margin-top: 4%; }
-  .contacto .contacto__fondo--email p {
-    margin-top: 7%; }
+  .contacto .contacto__fondo--telefono {
+    height: 120px; }
+    .contacto .contacto__fondo--telefono p {
+      margin-top: 5px; }
+  .contacto .contacto__fondo--email {
+    height: 120px; }
+    .contacto .contacto__fondo--email p {
+      margin-top: 15px; }
   .footer__parrafo {
     margin: auto 10px; } }
