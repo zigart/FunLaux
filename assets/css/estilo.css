@@ -147,6 +147,7 @@ main {
   .nosotros .nosotros__descripcion {
     text-align: center;
     margin: auto;
+    margin-bottom: 50px;
     padding: 50px;
     font-size: 20px; }
   .nosotros .nosotros__funlaux {
